@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="New Research on How Women in Leadership Navigated Menopause - PSM Manajemen"
+    />
+
+    <title>
+      New Research on How Women in Leadership Navigated Menopause - PSM
+      Manajemen
+    </title>
+
+    <link rel="icon" type="image/png" href="img/Logo-PSM.png" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      .article-detail-hero {
+        position: relative;
+        background: url("img/Nov25_01_Monika-Jurczyk.png") center/cover
+          no-repeat;
+        color: white;
+        padding: 120px 20px 80px;
+        min-height: 500px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .article-detail-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        z-index: 1;
+      }
+
+      .article-detail-container {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .article-date {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+      }
+
+      .article-detail-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        color: white;
+        max-width: 900px;
+      }
+
+      .article-social-share {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .social-share-btn {
+        width: 44px;
+        height: 44px;
+        background: white;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .social-share-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+      }
+
+      .social-share-btn svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+
+      .article-featured-image {
+        display: none; /* Hide since we're using it as background */
+      }
+
+      .article-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      .article-content h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--color-primary-navy);
+        margin: 40px 0 20px;
+      }
+
+      .article-content h3 {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--color-primary-navy);
+        margin: 30px 0 15px;
+      }
+
+      .article-content p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .article-content ul,
+      .article-content ol {
+        margin: 20px 0;
+        padding-left: 30px;
+      }
+
+      .article-content li {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .article-content blockquote {
+        border-left: 4px solid var(--color-primary-blue);
+        padding: 20px 30px;
+        margin: 30px 0;
+        background: #f8f9fa;
+        font-style: italic;
+        font-size: 20px;
+        color: #555;
+      }
+
+      .article-cta {
+        background: linear-gradient(135deg, #2251ff 0%, #0084d1 100%);
+        color: white;
+        padding: 60px 40px;
+        text-align: center;
+        border-radius: 0px;
+        margin-top: 60px;
+      }
+
+      .article-cta h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: white !important;
+      }
+
+      .article-cta p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: white !important;
+      }
+
+      .related-articles {
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 0 20px;
+      }
+
+      .related-articles h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--color-primary-navy);
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .related-articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+      }
+
+      .related-article-card {
+        background: white;
+        border-radius: 0px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        display: block;
+      }
+
+      .related-article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .related-article-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .related-article-content {
+        padding: 24px;
+      }
+
+      .related-article-category {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--color-primary-blue);
+        background: rgba(34, 81, 255, 0.1);
+        padding: 4px 12px;
+        border-radius: 0px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .related-article-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--color-primary-navy);
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+
+      .related-article-excerpt {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .related-article-meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        color: #999;
+      }
+
+      @media (max-width: 768px) {
+        .article-detail-hero {
+          padding: 80px 20px 60px;
+          min-height: 400px;
+        }
+
+        .article-detail-title {
+          font-size: 32px;
+          margin-bottom: 30px;
+        }
+
+        .article-date {
+          font-size: 14px;
+        }
+
+        .social-share-btn {
+          width: 40px;
+          height: 40px;
+        }
+
+        .article-excerpt {
+          font-size: 16px;
+        }
+
+        .article-content h2 {
+          font-size: 24px;
+        }
+
+        .article-content p,
+        .article-content li {
+          font-size: 16px;
+        }
+
+        .related-articles {
+          margin: 60px auto;
+        }
+
+        .related-articles h2 {
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+
+        .related-articles-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .related-article-image {
+          height: 200px;
+        }
+
+        .related-article-title {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index-new.html" class="navbar-logo-link">
+          <img src="img/Logo-PSM.png" alt="PSM Logo" class="navbar-logo" />
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="navbar-menu">
+          <ul class="navbar-links">
+            <li><a href="about-us.html" class="navbar-link">About Us</a></li>
+
+            <li class="navbar-dropdown">
+              <a href="#" class="navbar-link dropdown-toggle">
+                Services
+                <svg
+                  class="dropdown-icon"
+                  viewBox="0 0 10 6"
+                  fill="currentColor"
+                >
+                  <path d="M5 6L0 0h10L5 6z" />
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <a href="business-system-development.html" class="dropdown-item"
+                  >Business System Development</a
+                >
+                <a
+                  href="system-innovation-technology.html"
+                  class="dropdown-item"
+                  >System Innovation & Technology</a
+                >
+                <a href="implementation-mentoring.html" class="dropdown-item"
+                  >Implementation & Mentoring</a
+                >
+                <a href="fat-consultant.html" class="dropdown-item"
+                  >FAT Consultant</a
+                >
+              </div>
+            </li>
+
+            <li><a href="#shop" class="navbar-link">Shop</a></li>
+            <li><a href="articles.html" class="navbar-link">Article</a></li>
+            <li>
+              <a href="index-new.html#clients" class="navbar-link"
+                >Our Client</a
+              >
+            </li>
+          </ul>
+
+          <a href="contact-us.html" class="btn btn-primary">
+            Contact Us
+            <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
+              <path d="M0 0l6 6-6 6V0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="article-detail-hero">
+        <div class="article-detail-container">
+          <p class="article-date entrance-element">November 3, 2025</p>
+          <h1 class="article-detail-title entrance-element">
+            New research on how women in leadership navigated menopause
+          </h1>
+          <div class="article-social-share entrance-element">
+            <a
+              href="#"
+              class="social-share-btn"
+              aria-label="Share on Twitter"
+              title="Share on Twitter"
+            >
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-share-btn"
+              aria-label="Share on Facebook"
+              title="Share on Facebook"
+            >
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-share-btn"
+              aria-label="Share on LinkedIn"
+              title="Share on LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-share-btn"
+              aria-label="Bookmark this article"
+              title="Bookmark"
+            >
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Image (Hidden, used as background) -->
+      <div class="container" style="display: none">
+        <img
+          src="img/Nov25_01_Monika-Jurczyk.png"
+          alt="Women in Leadership"
+          class="article-featured-image entrance-element"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <article class="article-content">
+        <div class="entrance-element">
+          <p>
+            Menopause is a natural biological process that affects all women,
+            yet it remains a taboo topic in many professional settings. Recent
+            research has shed light on how women in leadership positions
+            navigate this significant life transition while maintaining their
+            effectiveness and influence.
+          </p>
+
+          <h2>The Silent Challenge in the Boardroom</h2>
+          <p>
+            Despite menopause affecting approximately 50% of the workforce at
+            some point in their careers, it's rarely discussed openly in
+            professional environments. This silence can lead to:
+          </p>
+          <ul>
+            <li>
+              Unnecessary stress and anxiety for women experiencing symptoms
+            </li>
+            <li>Lack of organizational support and accommodations</li>
+            <li>
+              Potential career setbacks due to misunderstood performance issues
+            </li>
+            <li>
+              Missed opportunities for creating inclusive workplace policies
+            </li>
+          </ul>
+
+          <h2>Key Findings from Recent Research</h2>
+          <p>
+            A groundbreaking study interviewed over 200 female executives across
+            various industries to understand their experiences. The research
+            revealed several critical insights:
+          </p>
+
+          <h3>1. Open Communication Matters</h3>
+          <p>
+            Leaders who were transparent with their teams about their menopause
+            journey reported better outcomes. By normalizing the conversation,
+            they created more supportive work environments and helped reduce
+            stigma for other women in their organizations.
+          </p>
+
+          <blockquote>
+            "When I opened up about my experience, I was amazed by the support I
+            received. It created a ripple effect of openness that benefited
+            everyone on my team."
+            <br />— Sarah Chen, CEO of TechForward
+          </blockquote>
+
+          <h3>2. Flexible Work Arrangements</h3>
+          <p>
+            Many successful leaders emphasized the importance of flexible
+            schedules and remote work options. These arrangements allowed them
+            to manage symptoms more effectively while maintaining productivity.
+          </p>
+
+          <h3>3. Professional Support Networks</h3>
+          <p>
+            Connecting with other women leaders going through similar
+            experiences proved invaluable. These networks provided:
+          </p>
+          <ul>
+            <li>Practical advice for managing symptoms</li>
+            <li>Emotional support during challenging times</li>
+            <li>Strategies for maintaining leadership effectiveness</li>
+            <li>Advocacy for workplace policy changes</li>
+          </ul>
+
+          <h2>Practical Strategies for Organizations</h2>
+          <p>
+            Based on the research findings, here are actionable steps
+            organizations can take to support women leaders during menopause:
+          </p>
+
+          <ol>
+            <li>
+              <strong>Create Menopause-Friendly Policies:</strong> Implement
+              clear policies that acknowledge menopause as a natural workplace
+              consideration, not a medical condition requiring special
+              treatment.
+            </li>
+
+            <li>
+              <strong>Provide Education and Training:</strong> Educate all
+              employees, especially managers, about menopause to reduce stigma
+              and increase understanding.
+            </li>
+
+            <li>
+              <strong>Offer Flexible Working Options:</strong> Allow for
+              adjustable schedules, remote work, and temporary modifications to
+              accommodate varying needs.
+            </li>
+
+            <li>
+              <strong>Ensure Comfortable Work Environments:</strong> Consider
+              temperature control, appropriate clothing policies, and access to
+              private spaces when needed.
+            </li>
+
+            <li>
+              <strong>Provide Access to Support:</strong> Offer employee
+              assistance programs, counseling services, and health resources
+              specifically addressing menopause.
+            </li>
+          </ol>
+
+          <h2>The Business Case for Support</h2>
+          <p>
+            Supporting women through menopause isn't just the right thing to
+            do—it makes business sense. Organizations that provide adequate
+            support benefit from:
+          </p>
+          <ul>
+            <li>Retained experienced leadership talent</li>
+            <li>Higher employee engagement and loyalty</li>
+            <li>Improved workplace culture and inclusivity</li>
+            <li>Enhanced reputation as an employer of choice</li>
+            <li>Better business outcomes through sustained performance</li>
+          </ul>
+
+          <h2>Moving Forward</h2>
+          <p>
+            As more women reach leadership positions and the workforce ages,
+            addressing menopause in professional settings becomes increasingly
+            important. Organizations that proactively create supportive
+            environments will be better positioned to retain top talent and
+            maintain competitive advantage.
+          </p>
+
+          <p>
+            The research makes it clear: when organizations support women
+            through menopause, everyone benefits. It's time to break the silence
+            and create workplaces where all employees can thrive throughout
+            their careers.
+          </p>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="article-cta entrance-element">
+          <h2>Want to Learn More About Leadership Development?</h2>
+          <p>
+            Explore our comprehensive leadership programs and organizational
+            development services designed to create inclusive, high-performing
+            workplaces.
+          </p>
+          <a
+            href="contact-us.html"
+            class="btn"
+            style="
+              background: white;
+              color: var(--color-primary-blue);
+              padding: 16px 40px;
+              font-size: 18px;
+            "
+          >
+            Contact Our Experts
+          </a>
+        </div>
+
+        <!-- Back to Articles -->
+        <div style="text-align: center; margin-top: 60px">
+          <a
+            href="index-new.html#articles"
+            class="btn"
+            style="
+              background: transparent;
+              border: 2px solid var(--color-primary-blue);
+              color: var(--color-primary-blue);
+              padding: 12px 32px;
+            "
+          >
+            ← Back to All Articles
+          </a>
+        </div>
+      </article>
+
+      <!-- Related Articles Section -->
+      <section class="related-articles">
+        <h2 class="entrance-element">Related Articles</h2>
+        <div class="related-articles-grid">
+          <!-- Article Card 1 -->
+          <a
+            href="article-1.html"
+            class="related-article-card entrance-element"
+          >
+            <img
+              src="img/news or article/Nov25_01_Monika-Jurczyk.png"
+              alt="Leadership Development"
+              class="related-article-image"
+            />
+            <div class="related-article-content">
+              <span class="related-article-category">Leadership</span>
+              <h3 class="related-article-title">
+                5 Keys to Effective Leadership in Modern Organizations
+              </h3>
+              <p class="related-article-excerpt">
+                Discover the essential skills and strategies that define
+                successful leaders in today's rapidly changing business
+                landscape.
+              </p>
+              <div class="related-article-meta">
+                <span>5 min read</span>
+                <span>•</span>
+                <span>Nov 2023</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article Card 2 -->
+          <a
+            href="article-1.html"
+            class="related-article-card entrance-element"
+          >
+            <img
+              src="img/news or article/article.png"
+              alt="Digital Transformation"
+              class="related-article-image"
+            />
+            <div class="related-article-content">
+              <span class="related-article-category">Technology</span>
+              <h3 class="related-article-title">
+                The Future of Work: Embracing Digital Transformation
+              </h3>
+              <p class="related-article-excerpt">
+                Learn how businesses are adapting to digital trends and what it
+                means for the future of workplace productivity.
+              </p>
+              <div class="related-article-meta">
+                <span>7 min read</span>
+                <span>•</span>
+                <span>Oct 2023</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article Card 3 -->
+          <a
+            href="article-1.html"
+            class="related-article-card entrance-element"
+          >
+            <img
+              src="img/news or article/4.png"
+              alt="Business Strategy"
+              class="related-article-image"
+            />
+            <div class="related-article-content">
+              <span class="related-article-category">Strategy</span>
+              <h3 class="related-article-title">
+                Building Resilient Business Systems for Sustainable Growth
+              </h3>
+              <p class="related-article-excerpt">
+                Explore proven strategies for creating robust business systems
+                that can weather challenges and drive long-term success.
+              </p>
+              <div class="related-article-meta">
+                <span>6 min read</span>
+                <span>•</span>
+                <span>Oct 2023</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <img src="img/Logo-PSM.png" alt="PSM Logo" class="footer-logo" />
+          <p class="footer-description">
+            Pengembang Sistem Manajemen adalah sister Company dari Human Plus
+            Institute, hadir khusus untuk konsultan manajemen dengan program
+            "Management Business Assistance".
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Menus</h4>
+            <ul>
+              <li><a href="about-us.html">Tentang Kami</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="index-new.html#clients">Our Client</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Layanan</h4>
+            <ul>
+              <li>
+                <a href="business-system-development.html"
+                  >Management Business Assistance</a
+                >
+              </li>
+              <li>
+                <a href="system-innovation-technology.html"
+                  >Expert Class Training</a
+                >
+              </li>
+              <li>
+                <a href="implementation-mentoring.html">Business Summit 2023</a>
+              </li>
+              <li><a href="fat-consultant.html">CEO Mentoring</a></li>
+              <li><a href="#mentoring-online">Mentoring Online</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column footer-contact">
+            <h4>Informations</h4>
+            <ul>
+              <li class="contact-item">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
+                  />
+                  <path
+                    d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"
+                  />
+                </svg>
+                <span>+62 821-1543-2434</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                  />
+                </svg>
+                <span>office@psm-manajemen.com</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="11"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                  />
+                </svg>
+                <span>Jakarta</span>
+              </li>
+            </ul>
+
+            <div class="footer-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7542!2d106.8456!3d-6.2884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnMTguMiJTIDEwNsKwNTAnNDQuMiJF!5e0!3m2!1sen!2sid!4v1234567890"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2023. PSM All Right Reserved</p>
+      </div>
+
+      <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" />
+        </svg>
+      </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

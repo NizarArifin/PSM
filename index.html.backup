@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="landing-page">
+      <div class="text-wrapper">Testimonial</div>
+      <div class="frame">
+        <div class="div">
+          <div class="frame-2">
+            <img class="logo-PSM" src="img/logo-PSM-1-1.png" />
+            <div class="menu">
+              <div class="frame-wrapper">
+                <div class="div-wrapper">
+                  <div class="frame-3">
+                    <div class="frame-4">
+                      <div class="text-wrapper-2">About Us</div>
+                    </div>
+                    <div class="layanan-button">
+                      <div class="text-wrapper-2">Services</div>
+                      <img class="vector" src="img/vector-31.svg" />
+                    </div>
+                    <div class="frame-5">
+                      <div class="text-wrapper-2">Shop</div>
+                    </div>
+                    <div class="frame-6">
+                      <div class="text-wrapper-2">Our Client</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="button">
+                <div class="text-wrapper-3">Contact Us</div>
+                <img class="img" src="img/vector.svg" />
+              </button>
+            </div>
+          </div>
+          <div class="frame-7">
+            <div class="group">
+              <div class="text-wrapper-4">Building Systems.</div>
+              <div class="text-wrapper-5">Driving Execution.</div>
+              <div class="text-wrapper-6">Delivering Growth.</div>
+            </div>
+            <div class="frame-8">
+              <img class="line" src="img/line-4.svg" />
+              <div class="group-2">
+                <p class="p">
+                  Your trusted partner in management system development,
+                  execution support, and business expansion acceleration.
+                </p>
+              </div>
+            </div>
+            <div class="frame-9">
+              <div class="free-consul">
+                <div class="free-consultation">Free Consultation</div>
+              </div>
+              <div class="explore-our-services">
+                <div class="text-wrapper-7">Explore Our Services</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article-n-who-we-are">
+          <div class="article">
+            <div class="group-of-article">
+              <div class="news">
+                <img class="img-2" src="img/nov25-01-monika-jurczyk-1-2.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      New Research on How Women in Leadership Navigated
+                      Menopause
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="news-2">
+                <img class="img-2" src="img/2-1-1.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      The Pitfalls That Undermine CEO Succession Planning
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="news-3">
+                <img class="img-2" src="img/3-1-1.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      You Should Be Able to Boil Your Strategy Down to a Single
+                      Clear Visualization
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="news-3">
+                <img class="img-2" src="img/4-1.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      Co-CEOs Need Regular Feedback—and a Process for Getting It
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-of-article">
+              <div class="news">
+                <img class="img-2" src="img/nov25-01-monika-jurczyk-1.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      New Research on How Women in Leadership Navigated
+                      Menopause
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="news-2">
+                <img class="img-2" src="img/image.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      The Pitfalls That Undermine CEO Succession Planning
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="news-3">
+                <img class="img-2" src="img/3-1-1-2.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      You Should Be Able to Boil Your Strategy Down to a Single
+                      Clear Visualization
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="news-3">
+                <img class="img-2" src="img/4-1-2.png" />
+                <div class="frame-10">
+                  <div class="text-wrapper-8">Article</div>
+                  <div class="frame-11">
+                    <p class="text-wrapper-9">
+                      Co-CEOs Need Regular Feedback—and a Process for Getting It
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="who-we-are">
+            <div class="frame-12">
+              <div class="frame-13">
+                <div class="text-wrapper-10">Who We Are</div>
+                <p class="PSM-pengembang">
+                  <span class="span">PSM </span>
+                  <span class="text-wrapper-11"
+                    >(Pengembang Sistem Manajemen)</span
+                  >
+                  <span class="span">
+                    is a management consulting company that helps businesses
+                    streamline systems, strengthen execution, optimize finance,
+                    and leverage technology &amp; AI to ensure real, measurable
+                    results.</span
+                  >
+                </p>
+              </div>
+              <div class="tentang-kami">
+                <div class="tentang-kami-2">About Us</div>
+                <div class="arrow-right">
+                  <img class="vector-2" src="img/vector-15.svg" />
+                  <img class="vector-3" src="img/vector-37.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="frame-14">
+              <div class="frame-15">
+                <div class="div-2">
+                  <div class="group-wrapper">
+                    <div class="group-3">
+                      <img class="vector-4" src="img/vector-3.svg" />
+                      <img class="vector-5" src="img/vector-22.svg" />
+                      <img class="vector-6" src="img/vector-27.svg" />
+                    </div>
+                  </div>
+                  <div class="div-3">
+                    <img class="line" src="img/line-1.svg" />
+                    <div class="text-wrapper-12">Hands-on Partner</div>
+                  </div>
+                  <p class="we-don-t-just-advise">
+                    We Don&#39;t Just Advise - We Execute With You, Ensuring
+                    Real Implementation And Tangible Results.
+                  </p>
+                </div>
+                <div class="div-2">
+                  <img class="frame-16" src="img/frame-1743.svg" />
+                  <div class="div-3">
+                    <img class="line" src="img/line-3.svg" />
+                    <div class="focused-on-result">Focused On Result</div>
+                  </div>
+                  <p class="focused-on-outcomes">
+                    Focused On Outcomes And Measurable Impact, Not Just
+                    Activities And Documentation.
+                  </p>
+                </div>
+                <div class="div-2">
+                  <div class="vector-wrapper">
+                    <img class="vector-7" src="img/vector-34.svg" />
+                  </div>
+                  <div class="div-3">
+                    <img class="line" src="img/line-2.svg" />
+                    <div class="text-wrapper-13">Holistic Approach</div>
+                  </div>
+                  <p class="integrating-strategy">
+                    Integrating Strategy, Systems, People, Finance, And
+                    Technology For Comprehensive Growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-17">
+          <div class="frame-18">
+            <div class="frame-19">
+              <div class="frame-20">
+                <div class="frame-21">
+                  <div class="text-wrapper-14">Our Services</div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-15">
+              <div class="div-4">
+                <div class="frame-22">
+                  <div class="text-wrapper-15">Business System Development</div>
+                </div>
+                <div class="evaluate-performance"></div>
+              </div>
+              <div class="div-4">
+                <div class="frame-22">
+                  <div class="text-wrapper-15">
+                    System Innovation &amp; Technology
+                  </div>
+                </div>
+                <div class="leadership"></div>
+              </div>
+              <div class="div-4">
+                <div class="frame-22">
+                  <div class="text-wrapper-15">
+                    Implementation &amp; Mentoring
+                  </div>
+                </div>
+                <div class="business"></div>
+              </div>
+              <div class="div-4">
+                <div class="frame-23">
+                  <div class="text-wrapper-15">FAT Consultant</div>
+                </div>
+                <div class="businessman-giving-a"></div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-24">
+            <div class="text-wrapper-16">Our Work Culture</div>
+            <div class="frame-25">
+              <div class="frame-wrapper-2">
+                <div class="frame-26">
+                  <img class="line" src="img/line-1-2.svg" />
+                  <div class="frame-27">
+                    <div class="text-wrapper-17">Professional</div>
+                    <img class="vector-8" src="img/vector-44.svg" />
+                  </div>
+                </div>
+              </div>
+              <div class="frame-wrapper-2">
+                <div class="frame-26">
+                  <img class="line" src="img/line-1-3.svg" />
+                  <div class="frame-27">
+                    <div class="text-wrapper-17">Integrity</div>
+                    <img class="vector-8" src="img/vector-35.svg" />
+                  </div>
+                </div>
+              </div>
+              <div class="frame-wrapper-2">
+                <div class="frame-26">
+                  <img class="line" src="img/line-1-4.svg" />
+                  <div class="frame-27">
+                    <div class="text-wrapper-17">Human Centered</div>
+                    <img class="vector-8" src="img/vector-9.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-28">
+            <div class="frame-28">
+              <div class="positive-impact">
+                <div class="frame-29">
+                  <div class="frame-30">
+                    <div class="text-wrapper-18">Our Positive Impact</div>
+                  </div>
+                  <p class="creating-lasting">
+                    Creating Lasting Value For Businesses, Communities, And
+                    Indonesia&#39;s Economy Through Sustainable Transformation
+                  </p>
+                </div>
+                <div class="impact">
+                  <div class="impact-2">
+                    <div class="frame-31">
+                      <div class="text-wrapper-19">300%+ Business Growth</div>
+                      <p class="average-revenue">
+                        Average Revenue Increase For Transformed Businesses
+                      </p>
+                    </div>
+                    <img class="rectangle" src="img/rectangle-12-3.png" />
+                    <div class="frame-32">
+                      <img class="vector-9" src="img/vector-26.svg" />
+                      <div class="text-wrapper-20">Impact</div>
+                    </div>
+                    <div class="img-wrapper">
+                      <img class="vector-10" src="img/vector-36.svg" />
+                    </div>
+                    <div class="text-wrapper-21">Activity Detail</div>
+                    <div class="button-play">
+                      <div class="component">
+                        <img class="vector-11" src="img/vector-13.svg" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="impact-2">
+                    <div class="frame-31">
+                      <div class="text-wrapper-19">300%+ Business Growth</div>
+                      <p class="average-revenue">
+                        Average Revenue Increase For Transformed Businesses
+                      </p>
+                    </div>
+                    <img class="rectangle" src="img/rectangle-12.png" />
+                    <div class="frame-32">
+                      <img class="vector-9" src="img/vector-19.svg" />
+                      <div class="text-wrapper-20">Impact</div>
+                    </div>
+                    <div class="img-wrapper">
+                      <img class="vector-10" src="img/vector-2.svg" />
+                    </div>
+                    <div class="text-wrapper-21">Activity Detail</div>
+                    <div class="button-play">
+                      <div class="component-2">
+                        <img class="vector-11" src="img/vector-7.svg" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="impact-2">
+                    <div class="frame-31">
+                      <div class="text-wrapper-19">300%+ Business Growth</div>
+                      <p class="average-revenue">
+                        Average Revenue Increase For Transformed Businesses
+                      </p>
+                    </div>
+                    <img class="rectangle" src="img/rectangle-12-2.png" />
+                    <div class="frame-32">
+                      <img class="vector-9" src="img/vector-14.svg" />
+                      <div class="text-wrapper-20">Impact</div>
+                    </div>
+                    <div class="img-wrapper">
+                      <img class="vector-10" src="img/vector-40.svg" />
+                    </div>
+                    <div class="text-wrapper-21">Activity Detail</div>
+                    <div class="button-play">
+                      <div class="component-3">
+                        <img class="vector-11" src="img/vector-43.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-33">
+                <div class="frame-34">
+                  <div class="frame-35">
+                    <div class="text-wrapper-22">Testimonials</div>
+                    <div class="frame-36">
+                      <div class="frame-37">
+                        <div class="text-wrapper-23">September 2 ,2025</div>
+                        <div class="frame-38">
+                          <img class="vector-12" src="img/vector-33.svg" />
+                          <img class="vector-12" src="img/vector-23.svg" />
+                          <img class="vector-12" src="img/vector-20.svg" />
+                          <img class="vector-12" src="img/vector-38.svg" />
+                          <img class="vector-12" src="img/vector-39.svg" />
+                        </div>
+                        <p class="text-wrapper-24">
+                          “Excellent institute for leaders who wants to gain
+                          knowledge and insight regarding how to survive and
+                          thrive in the professional world”
+                        </p>
+                        <div class="group-4">
+                          <div class="text-wrapper-25">hazar fatriana</div>
+                          <div class="text-wrapper-26">03/16/25</div>
+                        </div>
+                      </div>
+                      <div class="frame-37">
+                        <div class="text-wrapper-23">September 2 ,2025</div>
+                        <div class="frame-38">
+                          <img class="vector-12" src="img/vector-10.svg" />
+                          <img class="vector-12" src="img/vector-17.svg" />
+                          <img class="vector-12" src="img/vector-28.svg" />
+                          <img class="vector-12" src="img/vector-25.svg" />
+                          <img class="vector-12" src="img/vector-21.svg" />
+                        </div>
+                        <p class="text-wrapper-24">
+                          “Excellent institute for leaders who wants to gain
+                          knowledge and insight regarding how to survive and
+                          thrive in the professional world”
+                        </p>
+                        <div class="group-4">
+                          <div class="text-wrapper-25">hazar fatriana</div>
+                          <div class="text-wrapper-26">03/16/25</div>
+                        </div>
+                      </div>
+                      <div class="frame-37">
+                        <div class="text-wrapper-23">September 2 ,2025</div>
+                        <div class="frame-38">
+                          <img class="vector-12" src="img/vector-32.svg" />
+                          <img class="vector-12" src="img/vector-41.svg" />
+                          <img class="vector-12" src="img/vector-8.svg" />
+                          <img class="vector-12" src="img/vector-4.svg" />
+                          <img class="vector-12" src="img/vector-18.svg" />
+                        </div>
+                        <p class="text-wrapper-24">
+                          “Excellent institute for leaders who wants to gain
+                          knowledge and insight regarding how to survive and
+                          thrive in the professional world”
+                        </p>
+                        <div class="group-4">
+                          <div class="text-wrapper-25">hazar fatriana</div>
+                          <div class="text-wrapper-26">03/16/25</div>
+                        </div>
+                      </div>
+                      <div class="frame-37">
+                        <div class="text-wrapper-23">September 2 ,2025</div>
+                        <div class="frame-38">
+                          <img class="vector-12" src="img/vector-11.svg" />
+                          <img class="vector-12" src="img/vector-30.svg" />
+                          <img class="vector-12" src="img/image.svg" />
+                          <img class="vector-12" src="img/vector-16.svg" />
+                          <img class="vector-12" src="img/vector-12.svg" />
+                        </div>
+                        <p class="text-wrapper-24">
+                          “Excellent institute for leaders who wants to gain
+                          knowledge and insight regarding how to survive and
+                          thrive in the professional world”
+                        </p>
+                        <div class="group-4">
+                          <div class="text-wrapper-25">hazar fatriana</div>
+                          <div class="text-wrapper-26">03/16/25</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="frame-39">
+                  <div class="frame-40">
+                    <p class="text-wrapper-27">
+                      Watch Our Client Success Stories
+                    </p>
+                    <p class="text-wrapper-28">
+                      See real testimonials from business leaders who
+                      transformed their operations with PSM
+                    </p>
+                  </div>
+                  <img
+                    class="element"
+                    src="img/2025-10-08-13-43-01-psm-manajemen-com-9c7a025c956b-1.png"
+                  />
+                </div>
+                <div class="frame-41">
+                  <div class="frame-42">
+                    <p class="text-wrapper-29">
+                      Trusted by more than ... businesses in Indonesia
+                    </p>
+                  </div>
+                  <img class="group-5" src="img/group-2.png" />
+                </div>
+                <div class="landing-page-PSM">
+                  <p class="text-wrapper-30">
+                    Pengembang Sistem Manajemen adalah sister Company dari Human
+                    Plus Institute, hadir khusus untuk konsultan manajemen
+                    dengan program “Management Business Assistance”.
+                  </p>
+                  <p class="text-wrapper-31">© 2023. PSM All Right Reserved</p>
+                  <div class="group-6">
+                    <div class="frame-43">
+                      <div class="div-3">
+                        <div class="item-tentang-kami">Menus</div>
+                        <div class="text-wrapper-32">About Us</div>
+                        <div class="text-wrapper-32">Shop</div>
+                        <div class="text-wrapper-32">Our Client</div>
+                        <div class="text-wrapper-32">Contact Us</div>
+                      </div>
+                      <div class="div-3">
+                        <div class="item-tentang-kami">Services</div>
+                        <div class="item-tentang-kami-2">
+                          Business System Development
+                        </div>
+                        <div class="text-wrapper-32">
+                          System Innovation &amp; Technology
+                        </div>
+                        <div class="text-wrapper-32">
+                          Implementation and Mentoring
+                        </div>
+                        <div class="text-wrapper-32">FAT Consultant</div>
+                      </div>
+                      <div class="list">
+                        <div class="div-5">
+                          <div class="text-wrapper-33">Informations</div>
+                        </div>
+                        <div class="div-5">
+                          <div class="text-wrapper-34">+62 821-1543-2434</div>
+                          <div class="symbol"></div>
+                        </div>
+                        <div class="div-5">
+                          <div class="text-wrapper-35">
+                            office@psm-manajemen.com
+                          </div>
+                          <div class="symbol-2"></div>
+                        </div>
+                        <div class="div-5">
+                          <div class="text-wrapper-34">Jakarta</div>
+                          <div class="symbol-3"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="iframe-pasar-minggu"></div>
+                  </div>
+                  <div class="up">
+                    <div class="arrow-down">
+                      <img class="vector-13" src="img/vector-24.svg" />
+                      <img class="vector-14" src="img/vector-6.svg" />
+                    </div>
+                  </div>
+                  <img class="logo-PSM-2" src="img/logo-PSM-1-1-2.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

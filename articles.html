@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Latest articles and insights from PSM - Pengembang Sistem Manajemen"
+    />
+    <meta
+      name="keywords"
+      content="management articles, business insights, leadership, konsultan bisnis"
+    />
+
+    <title>Articles - PSM Manajemen</title>
+
+    <link rel="icon" type="image/png" href="img/Logo-PSM.png" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      .articles-hero {
+        background: linear-gradient(135deg, #051c2c 0%, #2251ff 100%);
+        color: white;
+        padding: 100px 20px 60px;
+        text-align: center;
+      }
+
+      .articles-hero-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: white;
+      }
+
+      .articles-hero-subtitle {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .articles-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      .articles-filter {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .filter-btn {
+        padding: 10px 24px;
+        background: white;
+        border: 2px solid #e0e0e0;
+        color: #666;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--color-primary-blue);
+        color: white;
+        border-color: var(--color-primary-blue);
+      }
+
+      .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      .article-item {
+        background: white;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .article-item-image {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+
+      .article-item-content {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article-item-category {
+        display: inline-block;
+        background: rgba(34, 81, 255, 0.1);
+        color: var(--color-primary-blue);
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        align-self: flex-start;
+      }
+
+      .article-item-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--color-primary-navy);
+        line-height: 1.4;
+        margin-bottom: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .article-item:hover .article-item-title {
+        color: var(--color-primary-blue);
+      }
+
+      .article-item-excerpt {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex: 1;
+      }
+
+      .article-item-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 13px;
+        color: #999;
+        padding-top: 16px;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .article-item-date {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .article-item-readtime {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 40px;
+      }
+
+      .pagination-btn {
+        padding: 10px 16px;
+        background: white;
+        border: 2px solid #e0e0e0;
+        color: #666;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 44px;
+      }
+
+      .pagination-btn:hover,
+      .pagination-btn.active {
+        background: var(--color-primary-blue);
+        color: white;
+        border-color: var(--color-primary-blue);
+      }
+
+      .pagination-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      @media (max-width: 768px) {
+        .articles-hero {
+          padding: 80px 20px 40px;
+        }
+
+        .articles-hero-title {
+          font-size: 36px;
+        }
+
+        .articles-container {
+          padding: 40px 20px;
+        }
+
+        .articles-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .filter-btn {
+          font-size: 13px;
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index-new.html" class="navbar-logo-link">
+          <img src="img/Logo-PSM.png" alt="PSM Logo" class="navbar-logo" />
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="navbar-menu">
+          <ul class="navbar-links">
+            <li><a href="about-us.html" class="navbar-link">About Us</a></li>
+
+            <li class="navbar-dropdown">
+              <a href="#" class="navbar-link dropdown-toggle">
+                Services
+                <svg
+                  class="dropdown-icon"
+                  viewBox="0 0 10 6"
+                  fill="currentColor"
+                >
+                  <path d="M5 6L0 0h10L5 6z" />
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <a href="business-system-development.html" class="dropdown-item"
+                  >Business System Development</a
+                >
+                <a
+                  href="system-innovation-technology.html"
+                  class="dropdown-item"
+                  >System Innovation & Technology</a
+                >
+                <a href="implementation-mentoring.html" class="dropdown-item"
+                  >Implementation & Mentoring</a
+                >
+                <a href="fat-consultant.html" class="dropdown-item"
+                  >FAT Consultant</a
+                >
+              </div>
+            </li>
+
+            <li><a href="#shop" class="navbar-link">Shop</a></li>
+            <li><a href="articles.html" class="navbar-link">Article</a></li>
+            <li>
+              <a href="index-new.html#clients" class="navbar-link"
+                >Our Client</a
+              >
+            </li>
+          </ul>
+
+          <a href="contact-us.html" class="btn btn-primary">
+            Contact Us
+            <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
+              <path d="M0 0l6 6-6 6V0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="articles-hero">
+        <div class="container">
+          <h1 class="articles-hero-title entrance-element">
+            Latest Insights & Articles
+          </h1>
+          <p class="articles-hero-subtitle entrance-element">
+            Discover expert insights, industry trends, and practical tips to
+            elevate your business management.
+          </p>
+        </div>
+      </section>
+
+      <!-- Articles Container -->
+      <div class="articles-container">
+        <!-- Filter Buttons -->
+        <div class="articles-filter entrance-element">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="leadership">
+            Leadership
+          </button>
+          <button class="filter-btn" data-filter="business">Business</button>
+          <button class="filter-btn" data-filter="technology">
+            Technology
+          </button>
+          <button class="filter-btn" data-filter="management">
+            Management
+          </button>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="articles-grid">
+          <!-- Article 1 -->
+          <a href="article-1.html" class="article-item entrance-element">
+            <img
+              src="img/news or article/Nov25_01_Monika-Jurczyk.png"
+              alt="Women in Leadership"
+              class="article-item-image"
+            />
+            <div class="article-item-content">
+              <span class="article-item-category">Leadership</span>
+              <h3 class="article-item-title">
+                New research on how women in leadership navigated menopause
+              </h3>
+              <p class="article-item-excerpt">
+                Understanding the challenges and strategies that successful
+                female leaders use to manage menopause while maintaining peak
+                performance in their professional roles.
+              </p>
+              <div class="article-item-meta">
+                <span class="article-item-date">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                    />
+                    <path
+                      d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                    />
+                  </svg>
+                  Nov 3, 2025
+                </span>
+                <span class="article-item-readtime">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                    />
+                    <path d="M13 7h-2v6h6v-2h-4z" />
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2 -->
+          <a href="#" class="article-item entrance-element">
+            <img
+              src="img/2 (1).png"
+              alt="CEO Succession Planning"
+              class="article-item-image"
+            />
+            <div class="article-item-content">
+              <span class="article-item-category">Leadership</span>
+              <h3 class="article-item-title">
+                The Pitfalls That Undermine CEO Succession Planning
+              </h3>
+              <p class="article-item-excerpt">
+                Learn about common mistakes organizations make in CEO succession
+                planning and how to avoid them for smoother leadership
+                transitions.
+              </p>
+              <div class="article-item-meta">
+                <span class="article-item-date">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                    />
+                    <path
+                      d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                    />
+                  </svg>
+                  Nov 1, 2025
+                </span>
+                <span class="article-item-readtime">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                    />
+                    <path d="M13 7h-2v6h6v-2h-4z" />
+                  </svg>
+                  6 min read
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3 -->
+          <a href="#" class="article-item entrance-element">
+            <img
+              src="img/3 (1).png"
+              alt="Business Strategy"
+              class="article-item-image"
+            />
+            <div class="article-item-content">
+              <span class="article-item-category">Business</span>
+              <h3 class="article-item-title">
+                Strategic Planning in Uncertain Times
+              </h3>
+              <p class="article-item-excerpt">
+                Discover effective strategies for business planning and
+                decision-making in volatile market conditions and economic
+                uncertainty.
+              </p>
+              <div class="article-item-meta">
+                <span class="article-item-date">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                    />
+                    <path
+                      d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                    />
+                  </svg>
+                  Oct 28, 2025
+                </span>
+                <span class="article-item-readtime">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                    />
+                    <path d="M13 7h-2v6h6v-2h-4z" />
+                  </svg>
+                  4 min read
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4 -->
+          <a href="#" class="article-item entrance-element">
+            <img
+              src="img/4.png"
+              alt="Digital Transformation"
+              class="article-item-image"
+            />
+            <div class="article-item-content">
+              <span class="article-item-category">Technology</span>
+              <h3 class="article-item-title">
+                Digital Transformation: A Practical Guide for SMEs
+              </h3>
+              <p class="article-item-excerpt">
+                Step-by-step guidance for small and medium enterprises looking
+                to embrace digital transformation and stay competitive.
+              </p>
+              <div class="article-item-meta">
+                <span class="article-item-date">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                    />
+                    <path
+                      d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                    />
+                  </svg>
+                  Oct 25, 2025
+                </span>
+                <span class="article-item-readtime">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                    />
+                    <path d="M13 7h-2v6h6v-2h-4z" />
+                  </svg>
+                  7 min read
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 5 -->
+          <a href="#" class="article-item entrance-element">
+            <img
+              src="img/news or article/3 (1).png"
+              alt="Team Management"
+              class="article-item-image"
+            />
+            <div class="article-item-content">
+              <span class="article-item-category">Management</span>
+              <h3 class="article-item-title">
+                Building High-Performance Teams in Remote Work Era
+              </h3>
+              <p class="article-item-excerpt">
+                Best practices for managing and motivating remote teams to
+                achieve exceptional results in the new normal of work.
+              </p>
+              <div class="article-item-meta">
+                <span class="article-item-date">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                    />
+                    <path
+                      d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                    />
+                  </svg>
+                  Oct 22, 2025
+                </span>
+                <span class="article-item-readtime">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                    />
+                    <path d="M13 7h-2v6h6v-2h-4z" />
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 6 -->
+          <a href="#" class="article-item entrance-element">
+            <img
+              src="img/news or article/4.png"
+              alt="Innovation"
+              class="article-item-image"
+            />
+            <div class="article-item-content">
+              <span class="article-item-category">Business</span>
+              <h3 class="article-item-title">
+                Innovation Culture: How to Foster Creativity in Your
+                Organization
+              </h3>
+              <p class="article-item-excerpt">
+                Practical approaches to creating an environment that encourages
+                innovation and creative problem-solving across all levels.
+              </p>
+              <div class="article-item-meta">
+                <span class="article-item-date">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                    />
+                    <path
+                      d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                    />
+                  </svg>
+                  Oct 20, 2025
+                </span>
+                <span class="article-item-readtime">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                    />
+                    <path d="M13 7h-2v6h6v-2h-4z" />
+                  </svg>
+                  6 min read
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="pagination-btn" disabled>Previous</button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <button class="pagination-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <section
+        style="
+          background: var(--color-primary-blue);
+          color: white;
+          padding: 60px 20px;
+          text-align: center;
+        "
+      >
+        <div class="container" style="max-width: 800px; margin: 0 auto">
+          <h2
+            class="entrance-element"
+            style="
+              font-size: 36px;
+              font-weight: 700;
+              margin-bottom: 20px;
+              color: white;
+            "
+          >
+            Ready to Transform Your Business?
+          </h2>
+          <p
+            class="entrance-element"
+            style="
+              font-size: 18px;
+              margin-bottom: 30px;
+              color: rgba(255, 255, 255, 0.9);
+            "
+          >
+            Get expert guidance and support to accelerate your business growth.
+          </p>
+          <a
+            href="contact-us.html"
+            class="entrance-element btn btn-primary"
+            style="
+              background: white;
+              color: var(--color-primary-blue);
+              border-radius: 50px;
+            "
+            >Contact Us</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+          <img src="img/Logo-PSM.png" alt="PSM Logo" class="footer-logo" />
+          <p class="footer-description">
+            Pengembang Sistem Manajemen adalah sister Company dari Human Plus
+            Institute, hadir khusus untuk konsultan manajemen dengan program
+            "Management Business Assistance".
+          </p>
+        </div>
+
+        <!-- Links Sections -->
+        <div class="footer-links">
+          <!-- Menus -->
+          <div class="footer-column">
+            <h4>Menus</h4>
+            <ul>
+              <li><a href="about-us.html">Tentang Kami</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="articles.html">Article</a></li>
+              <li><a href="#clients">Our Client</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-column">
+            <h4>Layanan</h4>
+            <ul>
+              <li>
+                <a href="business-system-development.html"
+                  >Management Business Assistance</a
+                >
+              </li>
+              <li><a href="#">Expert Class Training</a></li>
+              <li><a href="#">Business Summit 2023</a></li>
+              <li><a href="#">CEO Mentoring</a></li>
+              <li><a href="#">Mentoring Online</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="footer-column footer-contact">
+            <h4>Informations</h4>
+            <ul>
+              <li class="contact-item">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
+                  />
+                  <path
+                    d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"
+                  />
+                </svg>
+                <span>+62 821-1543-2434</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                  />
+                </svg>
+                <span>office@psm-manajemen.com</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="11"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                  />
+                </svg>
+                <span>Jakarta</span>
+              </li>
+            </ul>
+
+            <!-- Map -->
+            <div class="footer-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7542!2d106.8456!3d-6.2884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnMTguMiJTIDEwNsKwNTAnNDQuMiJF!5e0!3m2!1sen!2sid!4v1234567890"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2023. PSM All Right Reserved</p>
+      </div>
+
+      <!-- Back to Top Button -->
+      <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" />
+        </svg>
+      </button>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

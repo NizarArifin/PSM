@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with PSM - Pengembang Sistem Manajemen for free consultation and business transformation support."
+    />
+
+    <title>Contact Us - PSM Manajemen</title>
+
+    <link rel="icon" type="image/png" href="img/Logo-PSM.png" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      .contact-hero {
+        background: linear-gradient(135deg, #051c2c 0%, #0084d1 100%);
+        color: white;
+        padding: 100px 20px 80px;
+        text-align: center;
+      }
+
+      .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 20px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-top: 60px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .contact-info-item {
+        display: flex;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: var(--color-primary-light-blue);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .contact-info-content h3 {
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-bold);
+        margin-bottom: 10px;
+        color: var(--color-primary-navy);
+      }
+
+      .contact-info-content p {
+        font-size: var(--font-size-base);
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .contact-form-container {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .contact-form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .form-group-full {
+        grid-column: 1 / -1;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 16px 32px;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-bold);
+        background: var(--color-primary-blue);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: var(--transition-normal);
+      }
+
+      .submit-btn:hover {
+        background: #1a45e5;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(34, 81, 255, 0.3);
+      }
+
+      .map-container {
+        margin-top: 80px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+      }
+
+      @media (max-width: 768px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .contact-form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index-new.html" class="navbar-logo-link">
+          <img src="img/Logo-PSM.png" alt="PSM Logo" class="navbar-logo" />
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="navbar-menu">
+          <ul class="navbar-links">
+            <li><a href="about-us.html" class="navbar-link">About Us</a></li>
+
+            <li class="navbar-dropdown">
+              <a href="#" class="navbar-link dropdown-toggle">
+                Services
+                <svg
+                  class="dropdown-icon"
+                  viewBox="0 0 10 6"
+                  fill="currentColor"
+                >
+                  <path d="M5 6L0 0h10L5 6z" />
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <a href="business-system-development.html" class="dropdown-item"
+                  >Business System Development</a
+                >
+                <a
+                  href="system-innovation-technology.html"
+                  class="dropdown-item"
+                  >System Innovation & Technology</a
+                >
+                <a href="implementation-mentoring.html" class="dropdown-item"
+                  >Implementation & Mentoring</a
+                >
+                <a href="fat-consultant.html" class="dropdown-item"
+                  >FAT Consultant</a
+                >
+              </div>
+            </li>
+
+            <li><a href="#shop" class="navbar-link">Shop</a></li>
+            <li><a href="articles.html" class="navbar-link">Article</a></li>
+            <li>
+              <a href="index-new.html#clients" class="navbar-link"
+                >Our Client</a
+              >
+            </li>
+          </ul>
+
+          <a
+            href="contact-us.html"
+            class="btn btn-primary"
+            style="background: var(--color-primary-light-blue)"
+          >
+            Contact Us
+            <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
+              <path d="M0 0l6 6-6 6V0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="contact-hero">
+        <div class="container">
+          <h1
+            class="entrance-element"
+            style="
+              font-size: var(--font-size-4xl);
+              font-weight: var(--font-bold);
+              margin-bottom: 20px;
+              color: white;
+            "
+          >
+            Get In Touch
+          </h1>
+          <p
+            class="entrance-element"
+            style="
+              font-size: var(--font-size-xl);
+              max-width: 700px;
+              margin: 0 auto;
+              color: white;
+            "
+          >
+            Ready to transform your business? Contact us today for a free
+            consultation and discover how we can help you achieve sustainable
+            growth.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section>
+        <div class="contact-container">
+          <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info">
+              <div class="entrance-element">
+                <h2
+                  style="
+                    font-size: var(--font-size-3xl);
+                    font-weight: var(--font-bold);
+                    margin-bottom: 20px;
+                    color: var(--color-primary-navy);
+                  "
+                >
+                  Let's Start a Conversation
+                </h2>
+                <p
+                  style="
+                    font-size: var(--font-size-base);
+                    line-height: 1.8;
+                    color: #666;
+                  "
+                >
+                  We're here to help you build better systems, drive execution,
+                  and deliver growth. Reach out to us through any of the
+                  following channels.
+                </p>
+              </div>
+
+              <div class="contact-info-item entrance-element">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path
+                      d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
+                    />
+                    <path
+                      d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <h3>Phone</h3>
+                  <p>+62 821-1543-2434</p>
+                  <p>Available Mon-Fri, 9:00 AM - 6:00 PM WIB</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item entrance-element">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path
+                      d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <h3>Email</h3>
+                  <p>office@psm-manajemen.com</p>
+                  <p>We'll respond within 24 hours</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item entrance-element">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path
+                      d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <h3>Office</h3>
+                  <p>Jakarta, Indonesia</p>
+                  <p>By appointment only</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container entrance-element">
+              <h3
+                style="
+                  font-size: var(--font-size-xl);
+                  font-weight: var(--font-bold);
+                  margin-bottom: 30px;
+                  color: var(--color-primary-navy);
+                "
+              >
+                Send Us a Message
+              </h3>
+
+              <form data-validate>
+                <div class="contact-form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="firstName"
+                      >First Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name *</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group form-group-full">
+                    <label class="form-label" for="email"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group form-group-full">
+                    <label class="form-label" for="phone">Phone Number *</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group form-group-full">
+                    <label class="form-label" for="company">Company Name</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      class="form-input"
+                    />
+                  </div>
+
+                  <div class="form-group form-group-full">
+                    <label class="form-label" for="service"
+                      >Service Interest</label
+                    >
+                    <select id="service" name="service" class="form-input">
+                      <option value="">Select a service...</option>
+                      <option value="bsd">Business System Development</option>
+                      <option value="sit">
+                        System Innovation & Technology
+                      </option>
+                      <option value="implementation">
+                        Implementation & Mentoring
+                      </option>
+                      <option value="fat">FAT Consultant</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group form-group-full">
+                    <label class="form-label" for="message">Message *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-textarea"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="map-container entrance-element">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7542!2d106.8456!3d-6.2884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnMTguMiJTIDEwNsKwNTAnNDQuMiJF!5e0!3m2!1sen!2sid!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <img src="img/Logo-PSM.png" alt="PSM Logo" class="footer-logo" />
+          <p class="footer-description">
+            Pengembang Sistem Manajemen adalah sister Company dari Human Plus
+            Institute, hadir khusus untuk konsultan manajemen dengan program
+            "Management Business Assistance".
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Menus</h4>
+            <ul>
+              <li><a href="about-us.html">Tentang Kami</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="index-new.html#clients">Our Client</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Layanan</h4>
+            <ul>
+              <li>
+                <a href="business-system-development.html"
+                  >Management Business Assistance</a
+                >
+              </li>
+              <li>
+                <a href="system-innovation-technology.html"
+                  >Expert Class Training</a
+                >
+              </li>
+              <li>
+                <a href="implementation-mentoring.html">Business Summit 2023</a>
+              </li>
+              <li><a href="fat-consultant.html">CEO Mentoring</a></li>
+              <li><a href="#mentoring-online">Mentoring Online</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column footer-contact">
+            <h4>Informations</h4>
+            <ul>
+              <li class="contact-item">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
+                  />
+                  <path
+                    d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"
+                  />
+                </svg>
+                <span>+62 821-1543-2434</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                  />
+                </svg>
+                <span>office@psm-manajemen.com</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="11"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                  />
+                </svg>
+                <span>Jakarta</span>
+              </li>
+            </ul>
+
+            <div class="footer-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7542!2d106.8456!3d-6.2884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnMTguMiJTIDEwNsKwNTAnNDQuMiJF!5e0!3m2!1sen!2sid!4v1234567890"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2023. PSM All Right Reserved</p>
+      </div>
+
+      <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" />
+        </svg>
+      </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
