@@ -14,7 +14,46 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <style>
-      @media (max-width: 768px) {
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 600px;
+      }
+
+      .about-text-col {
+        padding: 80px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .about-image-col {
+        position: relative;
+        min-height: 600px;
+      }
+
+      /* Tablet */
+      @media (max-width: 1023px) {
+        .about-grid {
+          grid-template-columns: 1fr !important;
+          min-height: auto;
+        }
+
+        .about-text-col {
+          padding: 60px 40px !important;
+        }
+
+        .about-text-col h2 {
+          font-size: 36px !important;
+        }
+
+        .about-image-col {
+          min-height: 400px !important;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 767px) {
         .about-grid {
           grid-template-columns: 1fr !important;
         }
@@ -24,11 +63,18 @@
         }
 
         .about-text-col h2 {
-          font-size: 32px !important;
+          font-size: 28px !important;
+          margin-bottom: 24px !important;
+        }
+
+        .about-text-col p {
+          font-size: 15px !important;
+          margin-bottom: 20px !important;
         }
 
         .about-image-col {
           min-height: 300px !important;
+          order: -1;
         }
       }
     </style>
@@ -151,7 +197,7 @@
       </section>
 
       <!-- Navy Blue Description Section -->
-      <section style="background: #051c2c; color: white; padding: 60px 20px">
+      <section style="background: #0d4c91; color: white; padding: 60px 20px">
         <div class="container" style="max-width: 1200px; margin: 0 auto">
           <p
             class="entrance-element"
@@ -162,9 +208,9 @@
               color: rgba(255, 255, 255, 0.95);
             "
           >
-            PSM membantu bisnis tumbuh lebih cepat dan berkelanjutan melalui
-            strategi, sistem, dan teknologi yang benar-benar dieksekusi hingga
-            menghasilkan dampak nyata.
+            PSM helps businesses grow faster and more sustainably through
+            strategies, systems, and technology that are actually executed to
+            produce real impact.
           </p>
         </div>
       </section>
@@ -192,17 +238,6 @@
                 justify-content: center;
               "
             >
-              <h2
-                style="
-                  font-size: 48px;
-                  font-weight: 700;
-                  color: #000;
-                  margin-bottom: 40px;
-                  line-height: 1.2;
-                "
-              >
-                Apa itu PSM?
-              </h2>
               <p
                 style="
                   font-size: 16px;
@@ -212,18 +247,18 @@
                 "
               >
                 PSM
-                <span style="color: #2251ff; font-weight: 600"
-                  >(Pengembang Sistem Manajemen)</span
+                <span style="color: #0d4c91; font-weight: 600"
+                  >(Management System Developer)</span
                 >
-                adalah perusahaan konsultan manajemen yang berfokus pada
-                pengembangan sistem bisnis, optimalisasi eksekusi, serta
-                percepatan ekspansi perusahaan.
+                is a dedicated consulting company helping businesses streamline
+                systems, strengthen execution, and leverage technology for real,
+                measurable results.
               </p>
               <p style="font-size: 16px; line-height: 1.8; color: #333">
-                Kami membantu organisasi untuk membangun pondasi yang kokoh
-                melalui penyusunan standar operasional, pengembangan sumber daya
-                manusia, hingga penerapan teknologi berbasis AI yang
-                meningkatkan transparansi dan efektivitas kerja.
+                We help organizations build a solid foundation through
+                operational standards development, human resource enhancement,
+                and AI-based technology implementation that increases
+                transparency and work effectiveness.
               </p>
             </div>
 
@@ -284,7 +319,7 @@
       </section>
 
       <!-- VISI dan KOMITMEN KAMI Section - Blue Background -->
-      <section style="background: #2251ff; color: white; padding: 60px 20px">
+      <section style="background: #2f73c7; color: white; padding: 60px 20px">
         <div class="container" style="max-width: 1400px; margin: 0 auto">
           <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 60px">
             <!-- Left Column - VISI -->

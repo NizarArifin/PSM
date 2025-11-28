@@ -5,15 +5,43 @@
 /* Tablet Styles (768px - 1023px) */
 @media (max-width: 1023px) {
   :root {
-    --font-size-4xl: 60px;
+    --font-size-4xl: 48px;
     --font-size-3xl: 36px;
     --font-size-2xl: 28px;
+    --font-size-xl: 20px;
+    --font-size-lg: 18px;
     --spacing-xl: 60px;
     --spacing-2xl: 80px;
   }
 
   .container {
     padding: 0 var(--spacing-md);
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 60px 20px 50px;
+  }
+
+  .hero-animated-text {
+    padding: 0 20px;
+  }
+
+  .hero-text-line {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-cta {
+    gap: var(--spacing-sm);
+  }
+
+  .hero-cta .btn {
+    padding: 14px 28px;
+    font-size: 16px;
   }
 
   .navbar-container {
@@ -24,8 +52,28 @@
     gap: var(--spacing-md);
   }
 
-  .hero-title {
-    font-size: var(--font-size-4xl);
+  /* Article Grid */
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  /* Who We Are Section */
+  .who-we-are-section {
+    padding: 60px var(--spacing-md);
+  }
+
+  .who-we-are-title {
+    font-size: 40px;
+  }
+
+  .who-we-are-description {
+    font-size: 18px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 
   /* Stats Grid (By the Numbers) */
@@ -61,30 +109,31 @@
 
   .footer-map {
     max-width: 100%;
-    height: 180px;
+    height: 200px;
   }
 }
 
 /* Mobile Styles (320px - 767px) */
 @media (max-width: 767px) {
   :root {
-    --font-size-4xl: 36px;
+    --font-size-4xl: 32px;
     --font-size-3xl: 28px;
     --font-size-2xl: 24px;
-    --font-size-xl: 20px;
+    --font-size-xl: 18px;
+    --font-size-lg: 16px;
     --spacing-xl: 40px;
-    --spacing-2xl: 60px;
-    --spacing-lg: 30px;
-    --spacing-md: 20px;
+    --spacing-2xl: 50px;
+    --spacing-lg: 24px;
+    --spacing-md: 16px;
   }
 
   .container {
-    padding: 0 var(--spacing-sm);
+    padding: 0 16px;
   }
 
   /* Navigation Mobile */
   .navbar-container {
-    padding: var(--spacing-sm);
+    padding: 12px 16px;
   }
 
   .mobile-menu-toggle {
@@ -93,7 +142,7 @@
 
   .navbar-menu {
     position: fixed;
-    top: 100px;
+    top: 76px;
     left: 0;
     right: 0;
     background-color: var(--color-white);
@@ -139,51 +188,123 @@
   .btn {
     width: 100%;
     justify-content: center;
+    padding: 12px 24px;
+    font-size: 15px;
   }
 
   /* Hero Section */
   .hero-section {
-    padding: var(--spacing-lg) var(--spacing-sm);
-    min-height: 400px;
+    padding: 40px 16px 40px;
   }
 
-  .hero-title {
-    font-size: var(--font-size-3xl);
-    text-align: center;
+  .hero-animated-text {
+    margin-bottom: 24px;
+    padding: 0 8px;
+  }
+
+  .hero-text-line {
+    font-size: 28px !important;
+    line-height: 1.2;
+  }
+
+  .frame-8 {
+    margin-bottom: 28px;
+    padding: 0 8px;
   }
 
   .hero-subtitle {
-    font-size: var(--font-size-base);
-    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
   }
 
-  /* Cards Grid */
-  .cards-grid {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Article Grid */
+  .article-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
+    padding: 0;
   }
 
-  /* Feature Cards */
+  .article-card {
+    height: auto;
+    min-height: 350px;
+  }
+
+  .article-card-image {
+    height: 200px;
+  }
+
+  /* Who We Are Section */
+  .who-we-are-section {
+    padding: 40px 16px;
+  }
+
+  .who-we-are-content {
+    gap: var(--spacing-lg);
+  }
+
+  .who-we-are-title {
+    font-size: 28px;
+  }
+
+  .who-we-are-description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .who-we-are-link {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+
   .features-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
   }
 
-  /* Services Grid */
+  .feature-card-white {
+    padding: 20px;
+  }
+
+  .feature-title {
+    font-size: 17px !important;
+  }
+
+  .feature-description {
+    font-size: 14px !important;
+    line-height: 1.5;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 40px 16px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
   }
 
   /* Stats Grid (By the Numbers) */
   .stats-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--spacing-lg) !important;
+    gap: var(--spacing-md) !important;
   }
 
   /* Footer */
   .footer {
-    padding: 50px var(--spacing-sm) 20px;
+    padding: 40px 16px 20px;
   }
 
   .footer-container {
@@ -209,36 +330,37 @@
 
   .footer-description {
     max-width: 100%;
+    font-size: 14px;
   }
 
   .footer-map {
     max-width: 100%;
-    height: 250px;
+    height: 220px;
   }
 
   .footer-bottom {
-    margin-top: 30px;
-    padding-top: 15px;
+    margin-top: 24px;
+    padding-top: 16px;
   }
 
   .back-to-top {
     bottom: 20px;
     right: 20px;
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
   }
 
   /* Section Spacing */
   .section {
-    padding: var(--spacing-lg) 0;
+    padding: 40px 0;
   }
 
   .section-title {
-    font-size: var(--font-size-3xl);
+    font-size: 28px;
   }
 
   .section-title-large {
-    font-size: var(--font-size-3xl);
+    font-size: 28px;
   }
 
   /* Carousel */
@@ -271,19 +393,6 @@
 
   /* Work Culture Cards */
   .work-culture-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Back to Top */
-  .back-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
-  }
-
-  /* Article Cards */
-  .article-grid {
     grid-template-columns: 1fr !important;
   }
 
