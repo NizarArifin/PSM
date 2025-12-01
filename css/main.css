@@ -923,15 +923,16 @@
 
 /* Clients Logo Section */
 .clients-section {
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: var(--spacing-2xl) var(--spacing-md);
   text-align: center;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .clients-title {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-semibold);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
   color: var(--color-primary-navy);
 }
 
@@ -940,17 +941,22 @@
   position: relative;
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
 }
 
 .clients-carousel {
   display: flex;
-  animation: scrollLogos 30s linear infinite;
+  animation: scrollLogos 40s linear infinite;
   width: fit-content;
 }
 
 .clients-carousel:hover {
   animation-play-state: paused;
+}
+
+/* Reverse animation for second row */
+.clients-carousel-reverse {
+  animation: scrollLogosReverse 40s linear infinite;
 }
 
 .client-logo {
@@ -977,14 +983,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
   transition: var(--transition-normal);
-}
-
-.client-logo:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
 }
 
 @keyframes scrollLogos {
@@ -996,12 +995,11 @@
   }
 }
 
-.clients-logos {
-  max-width: 1275px;
-  margin: 0 auto;
-}
-
-.clients-image {
-  width: 100%;
-  height: auto;
+@keyframes scrollLogosReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
