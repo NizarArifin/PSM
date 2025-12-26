@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn more about PSM - Management System Developer, your trusted partner in management consulting and business transformation."
+    />
+
+    <title>About Us - PSM Manajemen</title>
+
+    <link rel="icon" type="image/png" href="../img/Logo-PSM.png" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <style>
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        align-items: stretch;
+      }
+
+      .about-text-col {
+        padding: 80px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .about-text-col h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #0d4c91;
+        text-align: left;
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .about-text-col p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 24px;
+        color: #333;
+        max-width: 600px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .about-image-col {
+        position: relative;
+        min-height: 600px;
+        overflow: hidden;
+      }
+
+      .about-image-col img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .vision-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 60px;
+      }
+
+      /* Responsive for zoom out - maintain readable sizes */
+      @media (max-width: 1400px) {
+        .about-text-col {
+          padding: 70px 50px;
+        }
+
+        .about-text-col h2 {
+          font-size: 38px;
+        }
+
+        .about-text-col p {
+          font-size: 15px;
+        }
+
+        .about-image-col {
+          min-height: 550px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .about-text-col {
+          padding: 60px 45px;
+        }
+
+        .about-text-col h2 {
+          font-size: 36px;
+        }
+
+        .about-image-col {
+          min-height: 500px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .about-text-col {
+          padding: 55px 40px;
+        }
+
+        .about-text-col h2 {
+          font-size: 34px;
+        }
+
+        .about-image-col {
+          min-height: 450px;
+        }
+
+        .vision-grid {
+          grid-template-columns: 1fr 2fr;
+          gap: 50px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .about-text-col {
+          padding: 50px 35px;
+        }
+
+        .about-text-col h2 {
+          font-size: 32px;
+        }
+
+        .about-text-col p {
+          font-size: 14px;
+        }
+
+        .about-image-col {
+          min-height: 400px;
+        }
+      }
+
+      /* Tablet portrait - stack vertically */
+      @media (max-width: 768px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-text-col {
+          padding: 50px 32px;
+        }
+
+        .about-text-col h2 {
+          font-size: 32px;
+          margin-bottom: 24px;
+        }
+
+        .about-text-col p {
+          font-size: 15px;
+          margin-bottom: 20px;
+          max-width: 100%;
+        }
+
+        .about-image-col {
+          min-height: 400px;
+          order: -1;
+          position: relative;
+        }
+
+        .about-image-col img {
+          position: absolute;
+        }
+
+        .vision-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        section[style*="padding: 60px 20px"],
+        section[style*="padding: 80px 20px"] {
+          padding: 50px 32px !important;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 480px) {
+        .about-text-col {
+          padding: 40px 24px;
+        }
+
+        .about-text-col h2 {
+          font-size: 28px;
+        }
+
+        .about-image-col {
+          min-height: 300px;
+        }
+
+        section[style*="padding: 60px 20px"],
+        section[style*="padding: 80px 20px"] {
+          padding: 40px 24px !important;
+        }
+
+        section[style*="min-height: 450px"] {
+          min-height: 300px !important;
+        }
+
+        section[style*="min-height: 450px"] h1 {
+          font-size: 32px !important;
+        }
+
+        section[style*="height: 600px"] {
+          height: 350px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="../index-new.html" class="navbar-logo-link">
+          <img src="../img/Logo-PSM.png" alt="PSM Logo" class="navbar-logo" />
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="navbar-menu">
+          <ul class="navbar-links">
+            <li>
+              <a
+                href="about-us.html"
+                class="navbar-link"
+                style="color: var(--color-primary-blue)"
+                >About Us</a
+              >
+            </li>
+
+            <li class="navbar-dropdown">
+              <a href="#" class="navbar-link dropdown-toggle">
+                Services
+                <svg
+                  class="dropdown-icon"
+                  viewBox="0 0 10 6"
+                  fill="currentColor"
+                >
+                  <path d="M5 6L0 0h10L5 6z" />
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <a href="../services/business-system-development.html" class="dropdown-item"
+                  >Business System Development</a
+                >
+                <a
+                  href="../services/system-innovation-technology-new.html"
+                  class="dropdown-item"
+                  >System Innovation & Technology</a
+                >
+                <a href="../services/implementation-mentoring.html" class="dropdown-item"
+                  >Implementation & Mentoring</a
+                >
+                <a href="../services/fat-consultant.html" class="dropdown-item"
+                  >FAT Consultant</a
+                >
+              </div>
+            </li>
+
+            <li><a href="#shop" class="navbar-link">Shop</a></li>
+            <li><a href="articles.html" class="navbar-link">Article</a></li>
+            <li>
+              <a href="../index-new.html#clients" class="navbar-link"
+                >Our Client</a
+              >
+            </li>
+          </ul>
+
+          <a href="contact-us.html" class="btn btn-primary">
+            Contact Us
+            <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
+              <path d="M0 0l6 6-6 6V0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section with Background Image -->
+      <section
+        style="
+          position: relative;
+          min-height: 450px;
+          display: flex;
+          align-items: center;
+          background: url('img/about-hero.jpg') center/cover no-repeat;
+        "
+      >
+        <div
+          style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6)"
+        ></div>
+        <div
+          style="
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 60px;
+          "
+        >
+          <p style="font-size: 16px; margin-bottom: 16px; letter-spacing: 1px">
+            About Us
+          </p>
+          <h1
+            class="entrance-element"
+            style="
+              font-size: 56px;
+              font-weight: 700;
+              line-height: 1.2;
+              max-width: 900px;
+              margin: 0;
+              color: white;
+            "
+          >
+            Empowering Organizations Through Systems, People, and Execution.
+          </h1>
+        </div>
+      </section>
+
+      <!-- Navy Blue Description Section -->
+      <section style="background: #2f73c7; color: white; padding: 60px 0">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 0 60px">
+          <p
+            class="entrance-element"
+            style="
+              font-size: 18px;
+              line-height: 1.8;
+              color: rgba(255, 255, 255, 0.95);
+              max-width: 900px;
+            "
+          >
+            PSM helps businesses grow faster and more sustainably through
+            strategies, systems, and technology that are actually executed to
+            produce real impact.
+          </p>
+        </div>
+      </section>
+
+      <!-- Apa itu PSM Section - Two Column Layout -->
+      <section style="padding: 0; background: white">
+        <div style="max-width: 100%; margin: 0">
+          <div
+            class="about-grid"
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0;
+              align-items: stretch;
+            "
+          >
+            <!-- Left Column - Text with Light Background -->
+            <div
+              class="about-text-col entrance-element"
+              style="
+                background: #f8f9fa;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <h2>
+                Who We Are
+              </h2>
+              <p>
+                PSM
+                <span style="color: #0d4c91; font-weight: 600"
+                  >(Management System Developer)</span
+                >
+                is a dedicated consulting company helping businesses streamline
+                systems, strengthen execution, and leverage technology for real,
+                measurable results.
+              </p>
+              <p>
+                We help organizations build a solid foundation through
+                operational standards development, human resource enhancement,
+                and AI-based technology implementation that increases
+                transparency and work effectiveness.
+              </p>
+            </div>
+
+            <!-- Right Column - Image -->
+            <div class="about-image-col entrance-element">
+              <img
+                src="../img/about-presenting.JPG"
+                alt="PSM Presentation"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Full Width Group Photo Section -->
+      <section
+        style="
+          padding: 0;
+          background: #f5f5f5;
+          position: relative;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <img
+            src="../img/about-team-full.jpg"
+            alt="PSM Team"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center 40%;
+              display: block;
+            "
+          />
+          <div
+            style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6)"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Vision and Commitment Section - Blue Background -->
+      <section style="background: white; color: #333; padding: 60px 0">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 0 60px">
+          <div class="vision-grid">
+            <!-- Left Column - Vision -->
+            <div class="entrance-element">
+              <h2
+                style="
+                  font-size: 32px;
+                  font-weight: 700;
+                  margin-bottom: 24px;
+                  color: #0d4c91;
+                "
+              >
+                VISION
+              </h2>
+              <p
+                style="
+                  font-size: 18px;
+                  line-height: 1.8;
+                  color: #333;
+                "
+              >
+                To help develop organizations and companies in Indonesia to
+                become world-class enterprises.
+              </p>
+            </div>
+
+            <!-- Right Column - Our Commitment -->
+            <div class="entrance-element">
+              <h2
+                style="
+                  font-size: 32px;
+                  font-weight: 700;
+                  margin-bottom: 24px;
+                  color: #0d4c91;
+                "
+              >
+                OUR COMMITMENT
+              </h2>
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 600;
+                  margin-bottom: 24px;
+                  color: #333;
+                "
+              >
+                Present to educate and empower the nation together
+              </p>
+
+              <ul style="list-style: none; padding: 0; margin: 0">
+                <li
+                  style="
+                    font-size: 16px;
+                    line-height: 1.8;
+                    margin-bottom: 16px;
+                    padding-left: 28px;
+                    position: relative;
+                    color: #333;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: #0d4c91;
+                      font-size: 20px;
+                    "
+                    >•</span
+                  >
+                  Organizing continuous mentoring programs for companies to help
+                  improve business operations to achieve world-class standards.
+                </li>
+                <li
+                  style="
+                    font-size: 16px;
+                    line-height: 1.8;
+                    margin-bottom: 16px;
+                    padding-left: 28px;
+                    position: relative;
+                    color: #333;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: #0d4c91;
+                      font-size: 20px;
+                    "
+                    >•</span
+                  >
+                  Organizing high-quality specialized training programs for
+                  managers to enhance professional competence and become
+                  world-class managers.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <img src="../img/Logo-PSM.png" alt="PSM Logo" class="footer-logo" />
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="../index-new.html#clients">Our Client</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li>
+                <a href="../services/business-system-development.html"
+                  >Business System Development</a
+                >
+              </li>
+              <li>
+                <a href="system-innovation-technology.html"
+                  >Expert Class Training</a
+                >
+              </li>
+              <li>
+                <a href="../services/implementation-mentoring.html">Business Summit 2023</a>
+              </li>
+              <li><a href="../services/fat-consultant.html">CEO Mentoring</a></li>
+              <li><a href="#mentoring-online">Mentoring Online</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column footer-contact">
+            <h4>Contact Info</h4>
+            <ul>
+              <li class="contact-item">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
+                  />
+                  <path
+                    d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"
+                  />
+                </svg>
+                <span>+62 821-1543-2434</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                  />
+                </svg>
+                <span>office@psm-manajemen.com</span>
+              </li>
+              <li class="contact-item">
+                <svg
+                  width="11"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                  />
+                </svg>
+                <span>Jakarta</span>
+              </li>
+            </ul>
+
+            <div class="footer-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7542!2d106.8456!3d-6.2884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnMTguMiJTIDEwNsKwNTAnNDQuMiJF!5e0!3m2!1sen!2sid!4v1234567890"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2023. PSM All Right Reserved</p>
+      </div>
+
+      <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" />
+        </svg>
+      </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

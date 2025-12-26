@@ -1,0 +1,349 @@
+/* PSM Admin Editor Styles */
+body {
+    background-color: #f4f6f8;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary-navy);
+    margin: 0;
+    padding-top: 100px;
+    /* Increased to prevent navbar overlap */
+}
+
+/* Navbar (Replaces Admin Bar) */
+.admin-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    justify-content: space-between;
+}
+
+.admin-logo {
+    height: 40px;
+    width: auto;
+}
+
+.admin-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary-navy);
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.admin-avatar {
+    width: 36px;
+    height: 36px;
+    background: var(--color-primary-blue);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* Layout */
+.wrap {
+    max-width: 1440px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-primary-navy);
+    margin: 0;
+}
+
+.editor-columns {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.editor-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.editor-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+/* Main Column Elements */
+.title-input-group {
+    margin-bottom: 30px;
+}
+
+#post-title {
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary-navy);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#post-title:focus {
+    border-color: var(--color-primary-blue);
+}
+
+.permalink-group {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.permalink-slug {
+    font-weight: 600;
+    color: var(--color-primary-blue);
+}
+
+/* WYSIWYG Editor Container */
+.wp-editor-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* overflow: hidden; Removed to allow sticky toolbar */
+}
+
+.wp-editor-toolbar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 20px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 80px;
+    /* Below navbar */
+    z-index: 10;
+    border-radius: 12px 12px 0 0;
+}
+
+.toolbar-btn {
+    background: #f8f9fa;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    transition: all 0.2s ease;
+}
+
+.toolbar-btn:hover {
+    background: var(--color-primary-blue);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.editor-content-area {
+    min-height: 600px;
+    padding: 40px;
+    outline: none;
+    overflow-y: visible;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Sidebar Meta Boxes */
+.meta-box {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.meta-box-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.meta-box-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-primary-navy);
+}
+
+.meta-box-content {
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Publish Box Specifics */
+.publish-status-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.publish-status-label {
+    color: #666;
+    font-weight: 500;
+}
+
+.publish-status-value {
+    font-weight: 600;
+    color: var(--color-primary-navy);
+}
+
+.publish-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    flex: 1;
+    background: #f4f6f8;
+    color: var(--color-primary-navy);
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+}
+
+.btn-primary-psm {
+    flex: 2;
+    background: var(--color-primary-blue);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(34, 81, 255, 0.2);
+}
+
+.btn-primary-psm:hover {
+    background: #0d4c91;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(34, 81, 255, 0.3);
+}
+
+/* Categories */
+.category-list {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.category-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+/* Featured Image */
+.featured-image-preview {
+    width: 100%;
+    height: auto;
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    cursor: pointer;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.featured-image-preview:hover {
+    border-color: var(--color-primary-blue);
+    background: #f0f4ff;
+}
+
+.featured-image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .editor-columns {
+        flex-direction: column;
+    }
+
+    .editor-sidebar {
+        width: 100%;
+    }
+
+    .wrap {
+        padding: 0 20px;
+    }
+
+    .admin-navbar {
+        padding: 0 20px;
+    }
+}

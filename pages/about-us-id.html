@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Learn more about PSM - Management System Developer, your trusted partner in management consulting and business transformation."
+      content="Pelajari lebih lanjut tentang PSM - Pengembang Sistem Manajemen, mitra terpercaya Anda dalam konsultasi manajemen dan transformasi bisnis."
     />
 
-    <title>About Us - PSM Manajemen</title>
+    <title>Tentang Kami - PSM Manajemen</title>
 
-    <link rel="icon" type="image/png" href="img/Logo-PSM.png" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="../img/Logo-PSM.png" />
+    <link rel="stylesheet" href="../css/main.css" />
 
     <style>
       .about-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        min-height: 600px;
+        gap: 0;
+        align-items: stretch;
       }
 
       .about-text-col {
@@ -25,56 +26,192 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: flex-end;
+      }
+
+      .about-text-col h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #0d4c91;
+        text-align: left;
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .about-text-col p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 24px;
+        color: #333;
+        max-width: 600px;
+        text-align: left;
+        width: 100%;
       }
 
       .about-image-col {
         position: relative;
         min-height: 600px;
+        overflow: hidden;
       }
 
-      /* Tablet */
-      @media (max-width: 1023px) {
-        .about-grid {
-          grid-template-columns: 1fr !important;
-          min-height: auto;
-        }
+      .about-image-col img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
+      .vision-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 60px;
+      }
+
+      /* Responsive for zoom out - maintain readable sizes */
+      @media (max-width: 1400px) {
         .about-text-col {
-          padding: 60px 40px !important;
+          padding: 70px 50px;
         }
 
         .about-text-col h2 {
-          font-size: 36px !important;
+          font-size: 38px;
+        }
+
+        .about-text-col p {
+          font-size: 15px;
         }
 
         .about-image-col {
-          min-height: 400px !important;
+          min-height: 550px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .about-text-col {
+          padding: 60px 45px;
+        }
+
+        .about-text-col h2 {
+          font-size: 36px;
+        }
+
+        .about-image-col {
+          min-height: 500px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .about-text-col {
+          padding: 55px 40px;
+        }
+
+        .about-text-col h2 {
+          font-size: 34px;
+        }
+
+        .about-image-col {
+          min-height: 450px;
+        }
+
+        .vision-grid {
+          grid-template-columns: 1fr 2fr;
+          gap: 50px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .about-text-col {
+          padding: 50px 35px;
+        }
+
+        .about-text-col h2 {
+          font-size: 32px;
+        }
+
+        .about-text-col p {
+          font-size: 14px;
+        }
+
+        .about-image-col {
+          min-height: 400px;
+        }
+      }
+
+      /* Tablet portrait - stack vertically */
+      @media (max-width: 768px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-text-col {
+          padding: 50px 32px;
+        }
+
+        .about-text-col h2 {
+          font-size: 32px;
+          margin-bottom: 24px;
+        }
+
+        .about-text-col p {
+          font-size: 15px;
+          margin-bottom: 20px;
+          max-width: 100%;
+        }
+
+        .about-image-col {
+          min-height: 400px;
+          order: -1;
+          position: relative;
+        }
+
+        .about-image-col img {
+          position: absolute;
+        }
+
+        .vision-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        section[style*="padding: 60px 20px"],
+        section[style*="padding: 80px 20px"] {
+          padding: 50px 32px !important;
         }
       }
 
       /* Mobile */
-      @media (max-width: 767px) {
-        .about-grid {
-          grid-template-columns: 1fr !important;
-        }
-
+      @media (max-width: 480px) {
         .about-text-col {
-          padding: 40px 20px !important;
+          padding: 40px 24px;
         }
 
         .about-text-col h2 {
-          font-size: 28px !important;
-          margin-bottom: 24px !important;
-        }
-
-        .about-text-col p {
-          font-size: 15px !important;
-          margin-bottom: 20px !important;
+          font-size: 28px;
         }
 
         .about-image-col {
+          min-height: 300px;
+        }
+
+        section[style*="padding: 60px 20px"],
+        section[style*="padding: 80px 20px"] {
+          padding: 40px 24px !important;
+        }
+
+        section[style*="min-height: 450px"] {
           min-height: 300px !important;
-          order: -1;
+        }
+
+        section[style*="min-height: 450px"] h1 {
+          font-size: 32px !important;
+        }
+
+        section[style*="height: 600px"] {
+          height: 350px !important;
         }
       }
     </style>
@@ -83,8 +220,8 @@
     <!-- Navigation -->
     <nav class="navbar">
       <div class="navbar-container">
-        <a href="index-new.html" class="navbar-logo-link">
-          <img src="img/Logo-PSM.png" alt="PSM Logo" class="navbar-logo" />
+        <a href="../index-new-id.html" class="navbar-logo-link">
+          <img src="../img/Logo-PSM.png" alt="PSM Logo" class="navbar-logo" />
         </a>
 
         <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -97,16 +234,16 @@
           <ul class="navbar-links">
             <li>
               <a
-                href="about-us.html"
+                href="about-us-id.html"
                 class="navbar-link"
                 style="color: var(--color-primary-blue)"
-                >About Us</a
+                >Tentang Kami</a
               >
             </li>
 
             <li class="navbar-dropdown">
               <a href="#" class="navbar-link dropdown-toggle">
-                Services
+                Layanan
                 <svg
                   class="dropdown-icon"
                   viewBox="0 0 10 6"
@@ -116,34 +253,40 @@
                 </svg>
               </a>
               <div class="dropdown-menu">
-                <a href="business-system-development.html" class="dropdown-item"
-                  >Business System Development</a
+                <a href="../services/business-system-development-id.html" class="dropdown-item"
+                  >Pengembangan Sistem Bisnis</a
                 >
                 <a
-                  href="system-innovation-technology-new.html"
+                  href="../services/system-innovation-technology-new-id.html"
                   class="dropdown-item"
-                  >System Innovation & Technology</a
+                  >Inovasi Sistem & Teknologi</a
                 >
-                <a href="implementation-mentoring.html" class="dropdown-item"
-                  >Implementation & Mentoring</a
+                <a href="../services/implementation-mentoring-id.html" class="dropdown-item"
+                  >Implementasi & Mentoring</a
                 >
-                <a href="fat-consultant.html" class="dropdown-item"
-                  >FAT Consultant</a
+                <a href="../services/fat-consultant-id.html" class="dropdown-item"
+                  >Konsultan FAT</a
                 >
               </div>
             </li>
 
-            <li><a href="#shop" class="navbar-link">Shop</a></li>
-            <li><a href="articles.html" class="navbar-link">Article</a></li>
+
+            <li><a href="articles-id.html" class="navbar-link">Artikel</a></li>
             <li>
-              <a href="index-new.html#clients" class="navbar-link"
-                >Our Client</a
+              <a href="../index-new.html#clients" class="navbar-link"
+                >Klien Kami</a
               >
             </li>
           </ul>
 
-          <a href="contact-us.html" class="btn btn-primary">
-            Contact Us
+          <div class="lang-switch">
+            <a href="about-us.html" class="lang-btn">EN</a>
+            <span style="color: #ccc">|</span>
+            <a href="about-us-id.html" class="lang-btn active">ID</a>
+          </div>
+
+          <a href="contact-us-id.html" class="btn btn-primary">
+            Hubungi Kami
             <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
               <path d="M0 0l6 6-6 6V0z" />
             </svg>
@@ -161,7 +304,6 @@
           min-height: 450px;
           display: flex;
           align-items: center;
-          justify-content: center;
           background: url('img/about-hero.jpg') center/cover no-repeat;
         "
       >
@@ -169,16 +311,18 @@
           style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6)"
         ></div>
         <div
-          class="container"
           style="
             position: relative;
             z-index: 1;
-            text-align: center;
             color: white;
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 60px;
           "
         >
           <p style="font-size: 16px; margin-bottom: 16px; letter-spacing: 1px">
-            About Us
+            Tentang Kami
           </p>
           <h1
             class="entrance-element"
@@ -187,30 +331,30 @@
               font-weight: 700;
               line-height: 1.2;
               max-width: 900px;
-              margin: 0 auto;
+              margin: 0;
               color: white;
             "
           >
-            Empowering Organizations Through Systems, People, and Execution.
+            Memberdayakan Organisasi Melalui Sistem, Manusia, dan Eksekusi.
           </h1>
         </div>
       </section>
 
       <!-- Navy Blue Description Section -->
-      <section style="background: #0d4c91; color: white; padding: 60px 20px">
-        <div class="container" style="max-width: 1200px; margin: 0 auto">
+      <section style="background: #2f73c7; color: white; padding: 60px 0">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 0 60px">
           <p
             class="entrance-element"
             style="
               font-size: 18px;
               line-height: 1.8;
-              text-align: center;
               color: rgba(255, 255, 255, 0.95);
+              max-width: 900px;
             "
           >
-            PSM helps businesses grow faster and more sustainably through
-            strategies, systems, and technology that are actually executed to
-            produce real impact.
+            PSM membantu bisnis tumbuh lebih cepat dan berkelanjutan melalui
+            strategi, sistem, dan teknologi yang benar-benar dieksekusi untuk
+            menghasilkan dampak nyata.
           </p>
         </div>
       </section>
@@ -232,60 +376,36 @@
               class="about-text-col entrance-element"
               style="
                 background: #f8f9fa;
-                padding: 80px 60px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
               "
             >
-              <h2
-                style="
-                  font-size: 42px;
-                  font-weight: 700;
-                  margin-bottom: 32px;
-                  color: #0d4c91;
-                "
-              >
-                Who We Are
+              <h2>
+                Siapa Kami
               </h2>
-              <p
-                style="
-                  font-size: 16px;
-                  line-height: 1.8;
-                  margin-bottom: 24px;
-                  color: #333;
-                "
-              >
+              <p>
                 PSM
                 <span style="color: #0d4c91; font-weight: 600"
                   >(Management System Developer)</span
                 >
-                is a dedicated consulting company helping businesses streamline
-                systems, strengthen execution, and leverage technology for real,
-                measurable results.
+                adalah perusahaan konsultan berdedikasi yang membantu bisnis merampingkan
+                sistem, memperkuat eksekusi, dan memanfaatkan teknologi untuk hasil yang
+                nyata dan terukur.
               </p>
-              <p style="font-size: 16px; line-height: 1.8; color: #333">
-                We help organizations build a solid foundation through
-                operational standards development, human resource enhancement,
-                and AI-based technology implementation that increases
-                transparency and work effectiveness.
+              <p>
+                Kami membantu organisasi membangun fondasi yang kokoh melalui
+                pengembangan standar operasional, peningkatan sumber daya manusia,
+                dan implementasi teknologi berbasis AI yang meningkatkan
+                transparansi dan efektivitas kerja.
               </p>
             </div>
 
             <!-- Right Column - Image -->
-            <div
-              class="about-image-col entrance-element"
-              style="position: relative; min-height: 500px"
-            >
+            <div class="about-image-col entrance-element">
               <img
-                src="img/about-presenting.JPG"
+                src="../img/about-presenting.JPG"
                 alt="PSM Presentation"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  display: block;
-                "
               />
             </div>
           </div>
@@ -312,7 +432,7 @@
           "
         >
           <img
-            src="img/about-team-full.jpg"
+            src="../img/about-team-full.jpg"
             alt="PSM Team"
             style="
               width: 100%;
@@ -329,30 +449,30 @@
       </section>
 
       <!-- Vision and Commitment Section - Blue Background -->
-      <section style="background: #2f73c7; color: white; padding: 60px 20px">
-        <div class="container" style="max-width: 1400px; margin: 0 auto">
-          <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 60px">
+      <section style="background: white; color: #333; padding: 60px 0">
+        <div style="max-width: 1440px; margin: 0 auto; padding: 0 60px">
+          <div class="vision-grid">
             <!-- Left Column - Vision -->
             <div class="entrance-element">
               <h2
                 style="
-                  font-size: 28px;
+                  font-size: 32px;
                   font-weight: 700;
                   margin-bottom: 24px;
-                  color: white;
+                  color: #0d4c91;
                 "
               >
-                VISION
+                VISI
               </h2>
               <p
                 style="
                   font-size: 18px;
                   line-height: 1.8;
-                  color: rgba(255, 255, 255, 0.95);
+                  color: #333;
                 "
               >
-                To help develop organizations and companies in Indonesia to
-                become world-class enterprises.
+                Membantu mengembangkan organisasi dan perusahaan di Indonesia untuk
+                menjadi perusahaan kelas dunia.
               </p>
             </div>
 
@@ -362,21 +482,21 @@
                 style="
                   font-size: 32px;
                   font-weight: 700;
-                  margin-bottom: 30px;
-                  color: #ffffff;
+                  margin-bottom: 24px;
+                  color: #0d4c91;
                 "
               >
-                OUR COMMITMENT
+                KOMITMEN KAMI
               </h2>
               <p
                 style="
                   font-size: 20px;
                   font-weight: 600;
                   margin-bottom: 24px;
-                  color: #ffffff;
+                  color: #333;
                 "
               >
-                Present to educate and empower the nation together
+                Hadir untuk mencerdaskan dan memberdayakan bangsa bersama
               </p>
 
               <ul style="list-style: none; padding: 0; margin: 0">
@@ -387,7 +507,7 @@
                     margin-bottom: 16px;
                     padding-left: 28px;
                     position: relative;
-                    color: rgba(255, 255, 255, 0.95);
+                    color: #333;
                   "
                 >
                   <span
@@ -395,13 +515,13 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: #ffeb3b;
+                      color: #0d4c91;
                       font-size: 20px;
                     "
                     >•</span
                   >
-                  Organizing continuous mentoring programs for companies to help
-                  improve business operations to achieve world-class standards.
+                  Menyelenggarakan program mentoring berkelanjutan bagi perusahaan untuk membantu
+                  meningkatkan operasi bisnis mencapai standar kelas dunia.
                 </li>
                 <li
                   style="
@@ -410,7 +530,7 @@
                     margin-bottom: 16px;
                     padding-left: 28px;
                     position: relative;
-                    color: rgba(255, 255, 255, 0.95);
+                    color: #333;
                   "
                 >
                   <span
@@ -418,14 +538,14 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: #ffeb3b;
+                      color: #0d4c91;
                       font-size: 20px;
                     "
                     >•</span
                   >
-                  Organizing high-quality specialized training programs for
-                  managers to enhance professional competence and become
-                  world-class managers.
+                  Menyelenggarakan program pelatihan khusus berkualitas tinggi bagi
+                  manajer untuk meningkatkan kompetensi profesional dan menjadi
+                  manajer kelas dunia.
                 </li>
               </ul>
             </div>
@@ -438,48 +558,42 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-about">
-          <img src="img/Logo-PSM.png" alt="PSM Logo" class="footer-logo" />
-          <p class="footer-description">
-            Management System Developer is a sister company of Human Plus
-            Institute, dedicated to management consulting with the "Management
-            Business Assistance" program.
-          </p>
+          <img src="../img/Logo-PSM.png" alt="PSM Logo" class="footer-logo" />
         </div>
 
         <div class="footer-links">
           <div class="footer-column">
-            <h4>Pages</h4>
+            <h4>Halaman</h4>
             <ul>
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="#shop">Shop</a></li>
-              <li><a href="index-new.html#clients">Our Client</a></li>
-              <li><a href="contact-us.html">Contact Us</a></li>
+              <li><a href="about-us-id.html">Tentang Kami</a></li>
+
+              <li><a href="../index-new.html#clients">Klien Kami</a></li>
+              <li><a href="contact-us-id.html">Hubungi Kami</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
-            <h4>Services</h4>
+            <h4>Layanan</h4>
             <ul>
               <li>
-                <a href="business-system-development.html"
-                  >Business System Development</a
+                <a href="../services/business-system-development-id.html"
+                  >Pengembangan Sistem Bisnis</a
                 >
               </li>
               <li>
-                <a href="system-innovation-technology.html"
-                  >Expert Class Training</a
+                <a href="../services/system-innovation-technology-new-id.html"
+                  >Inovasi Sistem & Teknologi</a
                 >
               </li>
               <li>
-                <a href="implementation-mentoring.html">Business Summit 2023</a>
+                <a href="../services/implementation-mentoring-id.html">Implementasi & Mentoring</a>
               </li>
-              <li><a href="fat-consultant.html">CEO Mentoring</a></li>
-              <li><a href="#mentoring-online">Mentoring Online</a></li>
+              <li><a href="../services/fat-consultant-id.html">Konsultan FAT</a></li>
             </ul>
           </div>
 
           <div class="footer-column footer-contact">
-            <h4>Contact Info</h4>
+            <h4>Info Kontak</h4>
             <ul>
               <li class="contact-item">
                 <svg
@@ -553,6 +667,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

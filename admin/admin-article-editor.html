@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor - PSM Management System</title>
+    <link rel="icon" type="image/png" href="../img/Logo-PSM.png">
+    
+    <!-- Editor UI Styles -->
+    <link rel="stylesheet" href="../css/editor.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Content Styles (To make the editor look like the frontend) -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <style>
+        /* Inline styles to mimic main.css ONLY inside the editor content area */
+        .article-content {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #051c2c; /* var(--color-primary-navy) */
+            margin: 40px 0 20px;
+        }
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #051c2c;
+            margin: 30px 0 15px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .article-content blockquote {
+            border-left: 4px solid #2251ff; /* var(--color-primary-blue) */
+            padding: 20px 30px;
+            margin: 30px 0;
+            background: #f8f9fa;
+            font-style: italic;
+            font-size: 20px;
+            color: #555;
+        }
+        .content-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .content-card h3 {
+            margin-top: 0;
+            color: #2251ff;
+        }
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        /* Stat Card Styles */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #2251ff; /* PSM Blue */
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .stat-desc {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PSM Admin Navbar -->
+    <nav class="admin-navbar">
+        <div style="display: flex; align-items: center;">
+            <img src="../img/Logo-PSM.png" alt="PSM" class="admin-logo">
+            <span class="admin-title">Content Management</span>
+        </div>
+        <div class="admin-user">
+            <span>Admin User</span>
+            <div class="admin-avatar">A</div>
+        </div>
+    </nav>
+
+    <!-- Main Workspace -->
+    <div class="wrap">
+        <div class="page-header">
+            <h1 class="page-title">Edit Article</h1>
+            <a href="../index-new.html" class="btn-secondary" style="text-decoration: none; padding: 10px 20px;">Back to Site</a>
+        </div>
+        
+        <div class="editor-columns">
+            
+            <!-- Left Column: Main Editor -->
+            <div class="editor-main">
+                
+                <!-- Title -->
+                <div class="title-input-group">
+                    <input type="text" id="post-title" value="New Research on How Women in Leadership Navigated Menopause" placeholder="Enter article title here...">
+                </div>
+
+                <!-- Permalink -->
+                <div class="permalink-group">
+                    <span style="color: #999;">Permalink:</span> 
+                    <span style="color: #333;">https://psm-manajemen.com/articles/</span><span class="permalink-slug">women-leadership-menopause</span>
+                </div>
+
+                <!-- WYSIWYG Editor -->
+                <div class="wp-editor-container">
+                    <div class="wp-editor-toolbar">
+                        <button class="toolbar-btn" onclick="execCmd('bold')" title="Bold"><i class="fas fa-bold"></i></button>
+                        <button class="toolbar-btn" onclick="execCmd('italic')" title="Italic"><i class="fas fa-italic"></i></button>
+                        <button class="toolbar-btn" onclick="execCmd('formatBlock', 'h2')" title="Heading 2">H2</button>
+                        <button class="toolbar-btn" onclick="execCmd('formatBlock', 'h3')" title="Heading 3">H3</button>
+                        <button class="toolbar-btn" onclick="execCmd('insertUnorderedList')" title="Bullet List"><i class="fas fa-list-ul"></i></button>
+                        <button class="toolbar-btn" onclick="execCmd('insertOrderedList')" title="Numbered List"><i class="fas fa-list-ol"></i></button>
+                        <button class="toolbar-btn" onclick="insertQuote()" title="Blockquote"><i class="fas fa-quote-right"></i></button>
+                        <div style="width: 1px; background: #eee; margin: 0 5px;"></div>
+                        <button class="toolbar-btn" onclick="execCmd('justifyLeft')" title="Align Left"><i class="fas fa-align-left"></i></button>
+                        <button class="toolbar-btn" onclick="execCmd('justifyCenter')" title="Align Center"><i class="fas fa-align-center"></i></button>
+                        <button class="toolbar-btn" onclick="execCmd('justifyRight')" title="Align Right"><i class="fas fa-align-right"></i></button>
+                        <div style="width: 1px; background: #eee; margin: 0 5px;"></div>
+                        <button class="toolbar-btn" onclick="insertCard()" title="Insert Card (Custom)"><i class="far fa-square"></i> Card</button>
+                        <button class="toolbar-btn" onclick="insertStatGrid()" title="Insert Stat Grid"><i class="fas fa-chart-bar"></i> Stats</button>
+                        <button class="toolbar-btn" onclick="insertImage()" title="Add Media"><i class="far fa-image"></i> Add Media</button>
+                    </div>
+                    
+                    <div id="content-editor" class="editor-content-area article-content" contenteditable="true">
+                        <p>Menopause is a natural biological process that affects all women, yet it remains a taboo topic in many professional settings. Recent research has shed light on how women in leadership positions navigate this significant life transition while maintaining their effectiveness and influence.</p>
+                        
+                        <h2>The Silent Challenge in the Boardroom</h2>
+                        <p>Despite menopause affecting approximately 50% of the workforce at some point in their careers, it's rarely discussed openly in professional environments.</p>
+                        
+                        <blockquote>
+                            "When I opened up about my experience, I was amazed by the support I received. It created a ripple effect of openness that benefited everyone on my team."
+                        </blockquote>
+                        
+                        <div class="stat-grid">
+                            <div class="stat-card">
+                                <span class="stat-icon">📉</span>
+                                <span class="stat-value">18% → 5%</span>
+                                <span class="stat-desc">Turnover reduced in 6 months</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-icon">📈</span>
+                                <span class="stat-value">+35%</span>
+                                <span class="stat-desc">Productivity increased</span>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Key Findings</h3>
+                            <p>Leaders who were transparent with their teams about their menopause journey reported better outcomes and stronger team cohesion.</p>
+                        </div>
+
+                        <ul>
+                            <li>Unnecessary stress and anxiety</li>
+                            <li>Lack of organizational support</li>
+                            <li>Potential career setbacks</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <div class="editor-sidebar">
+                
+                <!-- Publish Box -->
+                <div class="meta-box">
+                    <div class="meta-box-header">
+                        <span class="meta-box-title">Publishing</span>
+                        <i class="fas fa-chevron-down" style="color: #999;"></i>
+                    </div>
+                    <div class="meta-box-content">
+                        <div class="publish-status-row">
+                            <span class="publish-status-label">Status:</span>
+                            <span class="publish-status-value">Draft</span>
+                        </div>
+                        <div class="publish-status-row">
+                            <span class="publish-status-label">Visibility:</span>
+                            <span class="publish-status-value">Public</span>
+                        </div>
+                        
+                        <div class="publish-actions">
+                            <button class="btn-secondary" onclick="alert('Saved as Draft')">Save Draft</button>
+                            <button class="btn-primary-psm" onclick="publishArticle()">Publish</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="meta-box">
+                    <div class="meta-box-header">
+                        <span class="meta-box-title">Categories</span>
+                        <i class="fas fa-chevron-down" style="color: #999;"></i>
+                    </div>
+                    <div class="meta-box-content">
+                        <div class="category-list">
+                            <label class="category-item"><input type="checkbox" checked> Leadership</label>
+                            <label class="category-item"><input type="checkbox"> Technology</label>
+                            <label class="category-item"><input type="checkbox"> Strategy</label>
+                            <label class="category-item"><input type="checkbox"> Business Systems</label>
+                            <label class="category-item"><input type="checkbox"> Uncategorized</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Image -->
+                <div class="meta-box">
+                    <div class="meta-box-header">
+                        <span class="meta-box-title">Featured Image</span>
+                        <i class="fas fa-chevron-down" style="color: #999;"></i>
+                    </div>
+                    <div class="meta-box-content">
+                        <div class="featured-image-preview" onclick="insertFeaturedImage()" id="featuredImagePreview">
+                            <img src="../img/Nov25_01_Monika-Jurczyk.png" alt="Featured Image">
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="#" onclick="insertFeaturedImage()" style="text-decoration: none; color: var(--color-primary-blue); font-size: 14px; font-weight: 600;">Replace Image</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const contentEditor = document.getElementById('content-editor');
+
+        // Toolbar Commands
+        function execCmd(command, value = null) {
+            document.execCommand(command, false, value);
+            contentEditor.focus();
+        }
+
+        function insertQuote() {
+            const quoteHtml = '<blockquote>"Your quote here"</blockquote><p><br></p>';
+            document.execCommand('insertHTML', false, quoteHtml);
+            contentEditor.focus();
+        }
+
+        function insertCard() {
+            const cardHtml = '<div class="content-card"><h3>Card Title</h3><p>Card content goes here...</p></div><p><br></p>';
+            document.execCommand('insertHTML', false, cardHtml);
+            contentEditor.focus();
+        }
+
+        function insertStatGrid() {
+            const gridHtml = `
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon">😊</span>
+                        <span class="stat-value">Value</span>
+                        <span class="stat-desc">Description text here</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">✨</span>
+                        <span class="stat-value">Value</span>
+                        <span class="stat-desc">Description text here</span>
+                    </div>
+                </div>
+                <p><br></p>
+            `;
+            document.execCommand('insertHTML', false, gridHtml);
+            contentEditor.focus();
+        }
+
+        function insertImage() {
+            const url = prompt('Enter image URL:', 'img/news or article/article.png');
+            if (url) {
+                const imgHtml = `<img src="${url}" alt="Image">`;
+                document.execCommand('insertHTML', false, imgHtml);
+            }
+            contentEditor.focus();
+        }
+
+        function insertFeaturedImage() {
+            const url = prompt('Enter Featured Image URL:', 'img/Nov25_01_Monika-Jurczyk.png');
+            if (url) {
+                document.querySelector('#featuredImagePreview img').src = url;
+            }
+        }
+
+        // Publish Simulation
+        function publishArticle() {
+            const btn = document.querySelector('.btn-primary-psm');
+            const originalText = btn.textContent;
+            
+            btn.textContent = 'Publishing...';
+            btn.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                btn.textContent = 'Published!';
+                
+                setTimeout(() => {
+                    alert('Article published to PSM Web Article List successfully!');
+                    btn.textContent = 'Update'; 
+                    btn.style.opacity = '1';
+                }, 500);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

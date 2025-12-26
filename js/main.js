@@ -82,11 +82,33 @@ function initNavigation() {
     }
   });
   
+  // Language dropdown functionality
+  const langDropdown = document.querySelector('.lang-dropdown');
+  const langToggle = document.querySelector('.lang-dropdown-toggle');
+  
+  if (langDropdown && langToggle) {
+    langToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Close other dropdowns
+      dropdowns.forEach(d => d.classList.remove('active'));
+      STATE.activeDropdown = null;
+      
+      langDropdown.classList.toggle('active');
+    });
+  }
+  
   // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
     if (STATE.activeDropdown && !STATE.activeDropdown.contains(e.target)) {
       STATE.activeDropdown.classList.remove('active');
       STATE.activeDropdown = null;
+    }
+    
+    // Close language dropdown
+    if (langDropdown && !langDropdown.contains(e.target)) {
+      langDropdown.classList.remove('active');
     }
   });
   

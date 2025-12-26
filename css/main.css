@@ -17,16 +17,82 @@
 /* 4. Google Fonts - Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
-/* ============================================
-   Page Specific Styles
-   ============================================ */
+/* Language Dropdown */
+.lang-dropdown {
+  position: relative;
+  margin-right: 16px;
+}
 
-/* Container */
-.container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;
+.lang-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.lang-dropdown-toggle:hover {
+  background: #f5f7fa;
+}
+
+.lang-dropdown .globe-icon {
+  color: #666;
+}
+
+.lang-dropdown .dropdown-arrow {
+  transition: transform 0.2s ease;
+  color: #666;
+}
+
+.lang-dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  min-width: 140px;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.lang-dropdown.active .lang-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.lang-option:hover {
+  background: #f5f7fa;
+}
+
+.lang-option.active {
+  color: #0d4c91;
+  font-weight: 600;
 }
 
 /* Section */
@@ -219,17 +285,20 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-xs);
-  padding: 15px 20px;
-  font-size: var(--font-size-xl);
+  padding: 12px 24px;
+  font-size: var(--font-size-lg);
   font-weight: var(--font-bold);
   color: var(--color-white);
-  text-decoration: underline;
-  border-radius: var(--radius-md);
+  text-decoration: none;
+  background-color: var(--color-primary-blue);
+  border-radius: 4px;
   transition: var(--transition-normal);
 }
 
 .who-we-are-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #003366;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 76, 145, 0.3);
 }
 
 /* Features Grid */
@@ -334,7 +403,7 @@
     grid-template-columns: 1fr;
     gap: 12px;
   }
-  
+
   .service-card-simple {
     min-height: 400px;
   }
@@ -555,8 +624,8 @@
 
 /* Impact Section */
 .impact-section {
-  background: linear-gradient(rgba(5, 28, 44, 0.85), rgba(5, 28, 44, 0.85)), 
-              url('../img/Background Our Positive Impact.png') center/cover no-repeat;
+  background: linear-gradient(rgba(5, 28, 44, 0.85), rgba(5, 28, 44, 0.85)),
+    url('../img/Background Our Positive Impact.png') center/cover no-repeat;
   padding: var(--spacing-xl);
   color: var(--color-white);
 }
@@ -701,8 +770,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -710,6 +784,7 @@
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -792,7 +867,7 @@
 
 /* Testimonials Section */
 .testimonials-section {
-  background-color: var(--color-dark-bg);
+  background-color: var(--color-black);
   padding: var(--spacing-xl) 0;
   color: var(--color-white);
 }
@@ -990,6 +1065,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -999,6 +1075,7 @@
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }

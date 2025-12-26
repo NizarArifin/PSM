@@ -185,6 +185,58 @@
     display: block;
   }
 
+  /* Mega Menu Mobile */
+  .mega-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    padding: 16px;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: #f8f9fa;
+    margin-top: 8px;
+  }
+
+  .navbar-dropdown.has-mega-menu.active .mega-menu {
+    display: block;
+    transform: none;
+  }
+
+  .mega-menu-grid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .mega-menu-item {
+    padding: 10px 12px;
+  }
+
+  .mega-menu-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .mega-menu-item-title {
+    font-size: 13px;
+  }
+
+  .mega-menu-item-desc {
+    font-size: 11px;
+  }
+
+  .mega-menu-section {
+    margin-bottom: 16px;
+  }
+
+  .mega-menu-divider {
+    margin: 12px 0;
+  }
+
   .btn {
     width: 100%;
     justify-content: center;
