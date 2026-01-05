@@ -149,28 +149,32 @@
             <li><a href="#clients" class="navbar-link">Our Client</a></li>
           </ul>
 
-          <div class="lang-dropdown">
-            <button class="lang-dropdown-toggle">
-              <svg class="globe-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-              </svg>
-              EN
-              <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="currentColor" width="10" height="6">
-                <path d="M5 6L0 0h10L5 6z"/>
-              </svg>
-            </button>
-            <div class="lang-dropdown-menu">
-              <a href="index-new.html" class="lang-option active">English</a>
-              <a href="index-new-id.html" class="lang-option">Indonesian</a>
+          <div class="navbar-actions">
+            <div class="lang-dropdown">
+              <button class="lang-dropdown-toggle">
+                <svg class="globe-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                EN
+                <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="currentColor" width="10" height="6">
+                  <path d="M5 6L0 0h10L5 6z"/>
+                </svg>
+              </button>
+              <div class="lang-dropdown-menu">
+                <a href="index-new.html" class="lang-option active">English</a>
+                <a href="index-new-id.html" class="lang-option">Indonesian</a>
+              </div>
             </div>
-          </div>
 
-          <a href="pages/contact-us.html" class="btn btn-primary">
-            Contact Us
-            <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
-              <path d="M0 0l6 6-6 6V0z" />
-            </svg>
-          </a>
+            <a href="pages/career.html" class="navbar-link career-link">Career</a>
+
+            <a href="pages/contact-us.html" class="btn btn-primary">
+              Contact Us
+              <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
+                <path d="M0 0l6 6-6 6V0z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -467,16 +471,8 @@
 
         <div class="work-culture-grid">
           <div class="work-culture-card entrance-element">
-            <div class="work-culture-divider"></div>
             <div class="work-culture-header">
               <h3 class="work-culture-title">Responsive Professionalism</h3>
-              <svg
-                class="work-culture-icon"
-                viewBox="0 0 14 8"
-                fill="currentColor"
-              >
-                <path d="M7 8L0 0h14L7 8z" />
-              </svg>
             </div>
             <div class="work-culture-content">
               <ul class="work-culture-list">
@@ -489,18 +485,10 @@
           </div>
 
           <div class="work-culture-card entrance-element">
-            <div class="work-culture-divider"></div>
             <div class="work-culture-header">
               <h3 class="work-culture-title">
                 Our Work Culture: The Foundation of a Successful Partnership
               </h3>
-              <svg
-                class="work-culture-icon"
-                viewBox="0 0 14 8"
-                fill="currentColor"
-              >
-                <path d="M7 8L0 0h14L7 8z" />
-              </svg>
             </div>
             <div class="work-culture-content">
               <ul class="work-culture-list">
@@ -513,16 +501,8 @@
           </div>
 
           <div class="work-culture-card entrance-element">
-            <div class="work-culture-divider"></div>
             <div class="work-culture-header">
               <h3 class="work-culture-title">Human-Centered Approach</h3>
-              <svg
-                class="work-culture-icon"
-                viewBox="0 0 14 8"
-                fill="currentColor"
-              >
-                <path d="M7 8L0 0h14L7 8z" />
-              </svg>
             </div>
             <div class="work-culture-content">
               <ul class="work-culture-list">
@@ -1632,10 +1612,10 @@
             <h4>Pages</h4>
             <ul>
               <li><a href="pages/about-us.html">About Us</a></li>
-              <li><a href="#shop">Shop</a></li>
               <li><a href="pages/articles.html">Article</a></li>
               <li><a href="#clients">Our Client</a></li>
               <li><a href="pages/contact-us.html">Contact Us</a></li>
+              <li><a href="pages/career.html">Career</a></li>
             </ul>
           </div>
 
@@ -1733,7 +1713,7 @@
       </div>
 
       <button class="back-to-top" aria-label="Back to top">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" />
         </svg>
       </button>
